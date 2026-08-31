@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Beck's Sober Almanac</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root{
+    --forest:#1f2d26; --forest-2:#28382f; --parchment:#f3ecdd; --parch-warm:#ece2cd;
+    --ember:#c15a3a; --ember-soft:#d98b6a; --moss:#7d9070; --moss-deep:#5c6f52;
+    --dusk:#5a5470; --gold:#c9a24b; --ink:#221f1a; --ink-soft:#5a5348; --line:#d6cab2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  body{
+    font-family:'Newsreader',Georgia,serif; color:var(--ink);
+    background:radial-gradient(1200px 600px at 50% -10%, #f7f1e4 0%, var(--parchment) 55%);
+    min-height:100vh; line-height:1.5; padding-bottom:40px;
+  }
+  .hidden{display:none !important;}
+
+  /* SETUP */
+  #setup-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px;}
+  .setup-inner{max-width:460px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--ember);margin-bottom:18px;}
+  .setup-title{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(30px,7vw,44px);line-height:1.08;color:var(--forest);margin-bottom:18px;}
+  .setup-sub{font-size:16px;color:var(--ink-soft);margin-bottom:22px;max-width:42ch;}
+  .setup-field{margin-bottom:18px;}
+  .setup-field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px;}
+  .date-input,.num-input{width:100%;font-family:'Newsreader',serif;font-size:18px;padding:13px 15px;border:1.5px solid var(--line);background:#fffdf7;border-radius:2px;color:var(--ink);}
+  .date-input:focus,.num-input:focus{outline:none;border-color:var(--moss);}
+  .setup-hint{font-size:13px;font-style:italic;color:var(--ink-soft);margin-top:6px;}
+  .begin-btn,.save-btn{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.12em;text-transform:uppercase;background:var(--forest);color:var(--parchment);border:none;padding:16px 28px;border-radius:2px;cursor:pointer;transition:background .2s,transform .1s;margin-top:6px;}
+  .begin-btn:hover{background:var(--forest-2);}
+  .begin-btn:active,.save-btn:active{transform:translateY(1px);}
+
+  /* HERO */
+  .hero{display:flex;flex-direction:column;align-items:center;gap:14px;padding:34px 26px 8px;max-width:640px;margin:0 auto;text-align:center;}
+  .ring-caption{max-width:640px;margin:6px auto 0;padding:0 26px;text-align:center;font-style:italic;font-size:12.5px;color:var(--ink-soft);}
+  .ring-wrap{position:relative;width:240px;height:240px;flex-shrink:0;margin:0 auto;}
+  .season-ring{width:100%;height:100%;transform:rotate(-90deg);}
+  .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+  .day-num{font-family:'Fraunces',serif;font-weight:500;font-size:60px;line-height:.9;color:var(--forest);}
+  .day-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;}
+  .hero-meta{width:100%;}
+  .season-name{font-family:'Fraunces',serif;font-size:32px;font-weight:400;color:var(--forest);line-height:1;margin-bottom:6px;}
+  .date-today{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;color:var(--ink-soft);text-transform:uppercase;}
+  .milestone{margin-top:12px;font-size:15px;font-style:italic;color:var(--ember);line-height:1.35;}
+
+  /* COUNTERS strip */
+  .counters{display:flex;gap:1px;max-width:640px;margin:14px auto 0;padding:0 26px;}
+  .counter{flex:1;background:var(--parch-warm);padding:14px 10px;text-align:center;}
+  .counter:nth-child(1){border-radius:3px 0 0 3px;}
+  .counter:nth-child(3){border-radius:0 3px 3px 0;}
+  .counter-num{font-family:'Fraunces',serif;font-size:30px;font-weight:500;line-height:1;}
+  .counter:nth-child(1) .counter-num{color:var(--forest);}
+  .counter:nth-child(2) .counter-num{color:var(--ember);}
+  .counter:nth-child(3) .counter-num{color:var(--moss-deep);}
+  .counter-lbl{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:7px;}
+  .not-line{max-width:640px;margin:10px auto 0;padding:0 26px;font-style:italic;font-size:13px;color:var(--dusk);text-align:center;}
+  .pct-line{max-width:640px;margin:8px auto 0;padding:0 26px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:var(--moss-deep);}
+  .pct-line b{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:var(--moss-deep);letter-spacing:0;}
+
+  /* TABS */
+  .tabs{display:flex;max-width:640px;margin:14px auto 0;padding:0 26px;border-bottom:1.5px solid var(--line);}
+  .tab{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:none;border:none;cursor:pointer;padding:14px 18px;color:var(--ink-soft);position:relative;}
+  .tab.active{color:var(--forest);}
+  .tab.active::after{content:"";position:absolute;left:18px;right:18px;bottom:-1.5px;height:2.5px;background:var(--ember);}
+
+  /* VIEWS */
+  .view{max-width:640px;margin:0 auto;padding:22px 26px 0;}
+
+  /* North Star */
+  .star-block{position:relative;padding:24px 24px 26px;margin-bottom:8px;background:linear-gradient(160deg,#6b5b8f 0%,#8a76b0 55%,#a892c9 100%);border-radius:3px;overflow:hidden;}
+  .star-block::before{content:"\2726";position:absolute;top:14px;right:20px;font-size:20px;color:#f0e9d8;opacity:.85;}
+  .star-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#efe6f5;margin-bottom:12px;}
+  .star-text{font-family:'Fraunces',serif;font-weight:300;font-size:20px;line-height:1.4;color:#fbf9ff;max-width:46ch;}
+
+  .block{padding:22px 0;border-bottom:1px solid var(--line);}
+  .block-q{font-family:'Fraunces',serif;font-size:21px;font-weight:400;color:var(--forest);margin-bottom:4px;}
+  .block-hint{font-size:14px;font-style:italic;color:var(--ink-soft);margin-bottom:14px;}
+  .entry-date-input{font-family:'Newsreader',serif;font-size:16px;padding:11px 14px;border:1.5px solid var(--line);border-radius:2px;background:#fffdf7;color:var(--ink);}
+  .entry-date-input:focus{outline:none;border-color:var(--moss);}
+  .date-note{display:block;margin-top:8px;font-style:italic;font-size:13px;color:var(--ink-soft);}
+
+  /* accountability */
+  .acct-list{display:flex;flex-direction:column;gap:8px;margin-bottom:12px;}
+  .acct-item{display:flex;align-items:flex-start;gap:12px;background:#fffdf7;border:1.5px solid var(--line);border-radius:2px;padding:12px 14px;}
+  .acct-check{width:24px;height:24px;flex-shrink:0;border:2px solid var(--moss);border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .16s;margin-top:1px;background:none;font-size:14px;color:#fff;}
+  .acct-item.done .acct-check{background:var(--moss);border-color:var(--moss-deep);}
+  .acct-item.done .acct-text{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--moss);}
+  .acct-text{flex:1;font-size:16px;line-height:1.4;color:var(--ink);word-break:break-word;}
+  .acct-del{background:none;border:none;color:var(--line);cursor:pointer;font-size:18px;line-height:1;padding:0 2px;flex-shrink:0;transition:color .16s;}
+  .acct-del:hover{color:var(--ember);}
+  .acct-add-row{display:flex;gap:8px;}
+  .acct-input{flex:1;font-family:'Newsreader',serif;font-size:15px;padding:11px 14px;border:1.5px solid var(--line);border-radius:2px;background:#fffdf7;}
+  .acct-input:focus{outline:none;border-color:var(--moss);}
+  .acct-add-btn{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;background:var(--forest);color:var(--parchment);border:none;border-radius:2px;padding:0 18px;cursor:pointer;}
+  .acct-empty{font-style:italic;font-size:14px;color:var(--ink-soft);padding:2px 0;}
+
+  /* settings manage-list */
+  .manage-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .manage-list:empty::after{content:"None yet. Add one below.";font-style:italic;font-size:14px;color:var(--ink-soft);}
+  .manage-chip{display:inline-flex;align-items:center;gap:8px;background:#fffdf7;border:1.5px solid var(--line);border-radius:20px;padding:7px 8px 7px 15px;font-size:15px;color:var(--ink);}
+  .manage-chip .mc-x{width:22px;height:22px;flex-shrink:0;border:none;border-radius:50%;background:var(--parch-warm);color:var(--ink-soft);cursor:pointer;font-size:15px;line-height:1;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+  .manage-chip .mc-x:hover{background:var(--ember);color:#fff;}
+  .manage-add-row{display:flex;gap:8px;}
+  .settings-data-row{display:flex;gap:12px;flex-wrap:wrap;}
+
+  /* north star editor */
+  .ns-preview{margin-bottom:0;}
+  .ns-color-label,.ns-custom-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+  .ns-color-label{margin:18px 0 10px;}
+  .ns-swatches{display:flex;flex-wrap:wrap;gap:10px;}
+  .ns-swatch{width:38px;height:38px;border-radius:50%;border:2px solid #fffdf7;box-shadow:0 0 0 1.5px var(--line);cursor:pointer;padding:0;transition:transform .12s,box-shadow .12s;}
+  .ns-swatch:hover{transform:scale(1.08);}
+  .ns-swatch.sel{box-shadow:0 0 0 2px var(--forest);transform:scale(1.08);}
+  .ns-custom-row{display:flex;align-items:center;gap:12px;margin-top:16px;}
+  .ns-color-input{width:52px;height:36px;padding:0;border:1.5px solid var(--line);border-radius:4px;background:none;cursor:pointer;}
+
+  /* sober toggle */
+  .sober-row{display:flex;gap:8px;}
+  .sober-btn{flex:1;font-family:'Newsreader',serif;font-size:16px;color:var(--ink-soft);background:#fffdf7;border:1.5px solid var(--line);border-radius:2px;padding:14px;cursor:pointer;transition:all .16s;}
+  .sober-btn[data-v="sober"].sel{background:var(--moss);border-color:var(--moss-deep);color:#fff;}
+  .sober-btn[data-v="used"].sel{background:var(--dusk);border-color:var(--dusk);color:#fff;}
+
+  /* current scale */
+  .current-scale{display:flex;gap:8px;}
+  .cur-btn{flex:1;font-size:13px;color:var(--ink-soft);background:#fffdf7;border:1.5px solid var(--line);border-radius:2px;padding:12px 4px 10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:8px;transition:all .18s;}
+  .cur-mark{width:100%;height:4px;border-radius:2px;background:var(--line);}
+  .cur-btn:nth-child(1) .cur-mark{background:#9db8a8;}
+  .cur-btn:nth-child(2) .cur-mark{background:#8aa891;}
+  .cur-btn:nth-child(3) .cur-mark{background:var(--gold);}
+  .cur-btn:nth-child(4) .cur-mark{background:var(--ember-soft);}
+  .cur-btn:nth-child(5) .cur-mark{background:var(--ember);}
+  .cur-btn.sel{border-color:var(--forest);background:var(--parch-warm);color:var(--forest);}
+
+  /* chips (feelings, triggers, skills) */
+  .chip-grid{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{font-size:15px;color:var(--ink);background:#fffdf7;border:1.5px solid var(--line);border-radius:20px;padding:8px 15px;cursor:pointer;transition:all .16s;line-height:1.1;}
+  .chip:hover{border-color:var(--moss);}
+  .chip.sel{background:var(--moss);border-color:var(--moss-deep);color:#fff;}
+  .chip.trig.sel{background:var(--dusk);border-color:var(--dusk);}
+  .chip.skill.sel{background:var(--ember);border-color:var(--ember);color:#fff;}
+  .chip-add{width:100%;margin-top:12px;font-family:'Newsreader',serif;font-size:15px;padding:10px 14px;border:1.5px solid var(--line);border-radius:2px;background:#fffdf7;}
+  .chip-add:focus{outline:none;border-color:var(--moss);}
+
+  /* urge */
+  .urge-row{display:flex;gap:8px;flex-wrap:wrap;}
+  .urge-btn{flex:1;min-width:120px;font-size:15px;color:var(--ink-soft);background:#fffdf7;border:1.5px solid var(--line);border-radius:2px;padding:13px 10px;cursor:pointer;transition:all .16s;}
+  .urge-btn.sel{background:var(--forest);border-color:var(--forest);color:var(--parchment);}
+
+  /* journal */
+  .prompt-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;}
+  .prompt-chip{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--ember);background:none;border:1px dashed var(--ember-soft);border-radius:2px;padding:7px 11px;cursor:pointer;transition:all .16s;}
+  .prompt-chip:hover{background:#fbeee7;}
+  .journal{width:100%;font-family:'Newsreader',serif;font-size:17px;line-height:1.6;color:var(--ink);background:repeating-linear-gradient(transparent,transparent 31px,var(--line) 31px,var(--line) 32px);background-attachment:local;border:1.5px solid var(--line);border-radius:2px;padding:8px 16px;resize:vertical;min-height:180px;}
+  .journal:focus{outline:none;border-color:var(--moss);}
+
+  .save-row{display:flex;align-items:center;gap:16px;padding:24px 0 8px;flex-wrap:wrap;}
+  .save-btn{background:var(--ember);margin-top:0;}
+  .save-btn:hover{background:#a94b2f;}
+  .save-status{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--moss-deep);}
+
+  /* almanac */
+  .almanac-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:26px;}
+  .stat{background:var(--parchment);padding:18px 16px;}
+  .stat-num{font-family:'Fraunces',serif;font-size:30px;font-weight:500;color:var(--forest);line-height:1;}
+  .stat-lbl{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-top:8px;}
+  .entry{padding:20px 0;border-bottom:1px solid var(--line);}
+  .entry-top{display:flex;align-items:baseline;gap:12px;margin-bottom:8px;flex-wrap:wrap;}
+  .entry-actions{margin-left:auto;display:flex;gap:6px;}
+  .entry-edit,.entry-del{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:none;border:1px solid var(--line);border-radius:2px;padding:4px 9px;cursor:pointer;transition:all .15s;}
+  .entry-edit{color:var(--moss-deep);}
+  .entry-edit:hover{background:var(--moss);color:#fff;border-color:var(--moss);}
+  .entry-del{color:var(--dusk);}
+  .entry-del:hover{background:var(--ember);color:#fff;border-color:var(--ember);}
+  .edit-banner{background:#efe6f5;border:1.5px solid #a892c9;border-radius:3px;padding:12px 16px;margin-bottom:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.04em;color:#5b4b7f;display:flex;align-items:center;flex-wrap:wrap;gap:6px;}
+  .edit-cancel{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:#6b5b8f;color:#fff;border:none;border-radius:2px;padding:5px 12px;cursor:pointer;}
+  .danger-btn{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:none;color:var(--ember);border:1.5px solid var(--ember-soft);border-radius:2px;padding:9px 16px;cursor:pointer;}
+  .danger-btn:hover{background:var(--ember);color:#fff;border-color:var(--ember);}
+  .entry-day{font-family:'Fraunces',serif;font-size:22px;color:var(--ember);font-weight:500;}
+  .entry-date{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;}
+  .entry-sober{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;padding:2px 8px;border-radius:10px;}
+  .entry-sober.s{background:#e4ece0;color:var(--moss-deep);}
+  .entry-sober.u{background:#e6e3ed;color:var(--dusk);}
+  .entry-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+  .entry-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-bottom:10px;}
+  .entry-meta-item{display:inline-flex;align-items:center;gap:6px;}
+  .entry-meta-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);}
+  .etag{font-family:'IBM Plex Mono',monospace;font-size:10px;padding:3px 9px;border-radius:12px;background:var(--parch-warm);color:var(--ink-soft);}
+  .etag.f{background:#e4ece0;color:var(--moss-deep);}
+  .etag.t{background:#e6e3ed;color:var(--dusk);}
+  .etag.s{background:#f7e6dd;color:var(--ember);}
+  .etag.c{background:#dce8ec;color:#2f5d6b;}
+  .etag.u{background:#f0e6d2;color:#8a6d1f;}
+  .entry-journal{font-size:16px;line-height:1.55;color:var(--ink);white-space:pre-wrap;}
+  .empty-note{text-align:center;padding:50px 20px;color:var(--ink-soft);font-style:italic;font-size:16px;}
+
+  /* foot */
+  .foot{max-width:640px;margin:34px auto 0;padding:22px 26px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+  .foot-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .export-btn{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;color:var(--forest);border:1.5px solid var(--moss);border-radius:2px;padding:9px 16px;cursor:pointer;transition:all .16s;}
+  .export-btn:hover{background:var(--moss);color:#fff;}
+  .reset-link{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--ink-soft);background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}
+  .foot-note{font-style:italic;font-size:13px;color:var(--ink-soft);flex:1;text-align:right;min-width:180px;}
+
+  @media (max-width:480px){
+    .hero{gap:16px;padding:26px 20px 6px;}
+    .ring-wrap{width:200px;height:200px;}
+    .day-num{font-size:48px;}
+    .view{padding:20px 20px 0;}
+    .counters,.tabs,.not-line{padding-left:20px;padding-right:20px;}
+    .foot-note{text-align:left;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none !important;}}
+</style>
+</head>
+<body>
+<div id="app">
+  <!-- SETUP -->
+  <div id="setup-screen" class="screen">
+    <div class="setup-inner">
+      <p class="eyebrow">an evening ritual</p>
+      <h1 class="setup-title">What is your start date?</h1>
+      <p class="setup-sub">Set the day your count begins. This counter collects your progress toward a full year of sobriety, through every season. This is not a number that resets. It will count your sober days throughout the year even if they are not consecutive. Because bad days happen and they shouldn't negate the progress you've made.</p>
+      <div class="setup-field">
+        <label for="start-date-input">My start date</label>
+        <input type="date" id="start-date-input" class="date-input" />
+        <p class="setup-hint">Any day works. Your count begins here and moves forward through the year from this date.</p>
+      </div>
+      <button id="begin-btn" class="begin-btn">Begin the count</button>
+      <div id="clear-wrap" class="hidden" style="margin-top:28px;padding-top:20px;border-top:1px solid var(--line);">
+        <button id="diag-btn" class="danger-btn" style="border-color:var(--moss);color:var(--forest);">Show what's saved (diagnostic)</button>
+        <pre id="diag-out" class="hidden" style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;background:#fffdf7;border:1px solid var(--line);padding:12px;border-radius:2px;overflow:auto;max-height:260px;white-space:pre-wrap;"></pre>
+        <button id="clear-all-btn" class="danger-btn" style="margin-top:14px;">Clear all entries (fresh start)</button>
+        <p class="setup-hint" style="margin-top:8px;">Removes every logged day, including test data. Your start date and 2026 number stay. This cannot be undone, so export a backup first if you want a copy.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main-screen" class="screen hidden">
+    <header class="hero">
+      <div class="ring-wrap">
+        <svg viewBox="0 0 300 300" class="season-ring" id="season-ring" aria-hidden="true"></svg>
+        <div class="ring-center">
+          <div class="day-num" id="day-num">1</div>
+          <div class="day-label">days awake</div>
+        </div>
+      </div>
+      <div class="hero-meta">
+        <div class="season-name" id="season-name">Summer</div>
+        <div class="date-today" id="date-today"></div>
+        <div class="milestone" id="milestone"></div>
+      </div>
+    </header>
+    <p class="ring-caption">Each mark is one day of 2026. Filled marks are sober days.</p>
+
+    <div class="counters">
+      <div class="counter"><div class="counter-num" id="c-longest">0</div><div class="counter-lbl">longest streak</div></div>
+      <div class="counter"><div class="counter-num" id="c-month">0</div><div class="counter-lbl">sober this month</div></div>
+      <div class="counter"><div class="counter-num" id="c-total">0</div><div class="counter-lbl">days sober total</div></div>
+    </div>
+    <p class="not-line">Sobriety is not a straight line. A hard day never erases the clean ones behind it.</p>
+    <p class="pct-line" id="pct-line"></p>
+
+    <nav class="tabs">
+      <button class="tab active" data-view="today">Today</button>
+      <button class="tab" data-view="almanac">Journal</button>
+      <button class="tab" data-view="settings">Settings</button>
+    </nav>
+
+    <!-- TODAY -->
+    <section id="today-view" class="view">
+      <div id="edit-banner" class="edit-banner hidden"></div>
+      <div class="star-block" id="star-block">
+        <p class="star-eyebrow">North Star</p>
+        <p class="star-text" id="star-text">I am awake to my own life. I see the world clearly, and the goodness in me grows with every season.</p>
+      </div>
+
+      <div class="block date-block">
+        <div class="block-q">Which day am I logging?</div>
+        <input type="date" id="entry-date" class="entry-date-input" />
+        <span class="date-note" id="date-note"></span>
+      </div>
+
+      <div class="block">
+        <div class="block-q">Was today sober?</div>
+        <div class="sober-row" id="sober-row">
+          <button class="sober-btn" data-v="sober">sober</button>
+          <button class="sober-btn" data-v="used">used</button>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-q">How's the current of thoughts?</div>
+        <div class="current-scale" id="current-scale">
+          <button class="cur-btn" data-cur="1"><span class="cur-mark"></span>still</button>
+          <button class="cur-btn" data-cur="2"><span class="cur-mark"></span>gentle</button>
+          <button class="cur-btn" data-cur="3"><span class="cur-mark"></span>moving</button>
+          <button class="cur-btn" data-cur="4"><span class="cur-mark"></span>fast</button>
+          <button class="cur-btn" data-cur="5"><span class="cur-mark"></span>rapids</button>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-q">Today's emotions</div>
+        <div class="chip-grid" id="feeling-grid"></div>
+        <input type="text" id="feeling-add" class="chip-add" placeholder="add your own word…" />
+      </div>
+
+      <div class="block">
+        <div class="block-q">Did an urge visit today?</div>
+        <div class="urge-row" id="urge-row">
+          <button class="urge-btn" data-urge="none">didn't come</button>
+          <button class="urge-btn" data-urge="whisper">a whisper</button>
+          <button class="urge-btn" data-urge="pull">a real pull</button>
+          <button class="urge-btn" data-urge="knuckle">white-knuckle</button>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-q">Did anything push back today?</div>
+        <div class="chip-grid" id="trigger-grid"></div>
+        <input type="text" id="trigger-add" class="chip-add" placeholder="name another trigger…" />
+      </div>
+
+      <div class="block">
+        <div class="block-q">What skills did I reach for?</div>
+        <div class="chip-grid" id="skill-grid"></div>
+        <input type="text" id="skill-add" class="chip-add" placeholder="add a skill that helped…" />
+      </div>
+
+      <div class="block">
+        <div class="block-q">The writing</div>
+        <div class="prompt-chips" id="prompt-chips">
+          <button class="prompt-chip" data-prompt="One thing I did today that survival-me would have smoked through or avoided:">a growth win</button>
+          <button class="prompt-chip" data-prompt="Something I love or respect about myself right now:">self-respect</button>
+          <button class="prompt-chip" data-prompt="What did the hard part feel like in my body, and what happened when I stayed with it?">the hard part</button>
+          <button class="prompt-chip" data-prompt="An ANT I caught today, and what I said back to it:">an ANT I caught</button>
+          <button class="prompt-chip" data-prompt="What am I grateful I did today?">gratitude</button>
+        </div>
+        <textarea id="journal" class="journal" rows="7" placeholder="Whatever wants to come out. This is the part that holds the gold. Take all the room you need."></textarea>
+      </div>
+
+      <div class="save-row">
+        <button id="save-btn" class="save-btn">Save today</button>
+        <span id="save-status" class="save-status"></span>
+      </div>
+    </section>
+
+    <!-- ALMANAC -->
+    <section id="almanac-view" class="view hidden">
+      <div class="almanac-stats" id="almanac-stats"></div>
+      <div class="entries-list" id="entries-list"></div>
+    </section>
+
+    <!-- SETTINGS -->
+    <section id="settings-view" class="view hidden">
+      <div class="block">
+        <div class="block-q">North Star</div>
+        <div class="block-hint">Your guiding intention. It sits at the top of every day. Write your own and choose its color.</div>
+        <div class="star-block ns-preview" id="ns-preview">
+          <p class="star-eyebrow">North Star</p>
+          <p class="star-text" id="ns-preview-text"></p>
+        </div>
+        <textarea id="ns-text-input" class="journal" rows="3" style="min-height:96px;margin-top:14px;" placeholder="What are you walking toward? Write it in your own words."></textarea>
+        <div class="ns-color-label">Color</div>
+        <div class="ns-swatches" id="ns-swatches"></div>
+        <div class="ns-custom-row">
+          <label for="ns-color-input" class="ns-custom-label">Custom</label>
+          <input type="color" id="ns-color-input" class="ns-color-input" value="#6b5b8f" />
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-q">Start date</div>
+        <div class="block-hint">The day your count begins. Change it here anytime.</div>
+        <input type="date" id="settings-start-date" class="entry-date-input" />
+        <span class="date-note" id="settings-start-note"></span>
+      </div>
+
+      <div class="block">
+        <div class="block-q">Emotions</div>
+        <div class="block-hint">The feelings you check in with each day. Add your own, remove the ones that don't fit.</div>
+        <div class="manage-list" id="manage-feelings"></div>
+        <div class="manage-add-row">
+          <input type="text" id="manage-feeling-add" class="acct-input" placeholder="add an emotion…" />
+          <button class="acct-add-btn" id="manage-feeling-btn">add</button>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-q">Triggers</div>
+        <div class="block-hint">The things that push back. Add what fits your life, remove what doesn't.</div>
+        <div class="manage-list" id="manage-triggers"></div>
+        <div class="manage-add-row">
+          <input type="text" id="manage-trigger-add" class="acct-input" placeholder="add a trigger…" />
+          <button class="acct-add-btn" id="manage-trigger-btn">add</button>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="block-q">Skills</div>
+        <div class="block-hint">The things you reach for. Add your own, remove the ones you never use.</div>
+        <div class="manage-list" id="manage-skills"></div>
+        <div class="manage-add-row">
+          <input type="text" id="manage-skill-add" class="acct-input" placeholder="add a skill…" />
+          <button class="acct-add-btn" id="manage-skill-btn">add</button>
+        </div>
+      </div>
+
+      <div class="block" style="border-bottom:none;">
+        <div class="block-q">Your data</div>
+        <div class="block-hint">Everything stays on this device. Export a backup to move entries between your laptop and phone, and to keep your writing safe.</div>
+        <div class="settings-data-row">
+          <button id="settings-export-btn" class="export-btn">Export backup</button>
+          <button id="settings-import-btn" class="export-btn">Import backup</button>
+          <input type="file" id="settings-import-file" accept=".json,application/json" style="display:none" />
+        </div>
+        <button id="settings-clear-btn" class="danger-btn" style="margin-top:16px;">Clear all entries (fresh start)</button>
+        <p class="setup-hint" style="margin-top:8px;">Removes every logged day. Your start date and settings stay. This cannot be undone, so export a backup first if you want a copy.</p>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div class="foot-actions">
+        <button id="export-btn" class="export-btn">Export backup</button>
+        <button id="import-btn" class="export-btn">Import backup</button>
+        <input type="file" id="import-file" accept=".json,application/json" style="display:none" />
+        <button id="reset-link" class="reset-link">advanced setup</button>
+      </div>
+      <span class="foot-note">Everything stays on this device. Export a backup to move entries between your laptop and phone, and to keep your writing safe. A missed day is never a reason to stop.</span>
+    </footer>
+  </div>
+</div>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s);};
+  var $$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s));};
+  var KEY="beck_sober_almanac_v1";
+
+  var FEELINGS=["grounded","anxious","joyful","hopeful","raw","clear","proud","tender","restless","peaceful","frustrated","grateful","numb","alive","ashamed","brave","tired","curious","lonely","content","overwhelmed","steady","fiery","soft"];
+  var TRIGGERS=["holiday","family","boredom","stress","celebration","loneliness","exhaustion","conflict","travel","camping","a hard memory","late night","social event","perfectionism","good news"];
+  var SKILLS=["yoga nidra","walked","exercise","time in nature","called someone","named the ANT","hand on heart","radical acceptance","cold water immersion","intense muscle relaxation","breathwork","left the situation","one-mindfulness","checked the facts","made art","went to bed early","let myself rest"];
+  var URGE_LABELS={none:"no urge today",whisper:"a whisper",pull:"a real pull",knuckle:"white-knuckle"};
+  var CURRENT_LABELS={"1":"still","2":"gentle","3":"moving","4":"fast","5":"rapids"};
+
+  var DEFAULT_NORTH_STAR="I am awake to my own life. I see the world clearly, and the goodness in me grows with every season.";
+  var DEFAULT_NS_COLOR="#6b5b8f";
+  var NS_PRESETS=["#6b5b8f","#5c6f52","#c15a3a","#3f6d7a","#a8587a","#b58a2e","#4a4a52"];
+
+  var state={startDate:null,offset2026:0,longestBest:0,monthOffset:0,entries:{},customFeelings:[],customTriggers:[],customSkills:[],feelingList:null,triggerList:null,skillList:null,northStar:null,northStarColor:null};
+  var editingKey=null;
+
+  // Build the user-editable option lists. On first run these come from the defaults
+  // plus anything previously added via the old custom arrays, so nothing is lost.
+  function migrateLists(){
+    function seed(listKey,base,customKey){
+      if(!Array.isArray(state[listKey])){
+        var out=base.slice();
+        (state[customKey]||[]).forEach(function(x){if(out.indexOf(x)<0)out.push(x);});
+        state[listKey]=out;
+      }
+    }
+    seed("feelingList",FEELINGS,"customFeelings");
+    seed("triggerList",TRIGGERS,"customTriggers");
+    seed("skillList",SKILLS,"customSkills");
+  }
+
+  function todayKey(){var d=new Date();d.setHours(d.getHours()-5);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+  function selectedDate(){var ed=document.getElementById("entry-date");return (ed&&ed.value)?ed.value:todayKey();}
+  function yesterdayKeyDiag(){var d=new Date();d.setHours(d.getHours()-5);d.setDate(d.getDate()-1);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+  function fmtDate(k){var p=k.split("-").map(Number);return new Date(p[0],p[1]-1,p[2]).toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"});}
+  function dayNumber(startKey,key){if(!startKey)return 0;var a=new Date(startKey+"T00:00:00"),b=new Date(key+"T00:00:00");return Math.floor((b-a)/86400000)+1;}
+  function soberDayNumber(key){
+    // Counts only sober days from state.startDate through key, inclusive.
+    // This is "which sober day is this" (Day 1, Day 2, ...), not calendar days elapsed.
+    if(!state.startDate) return 0;
+    var keys=Object.keys(state.entries).filter(function(k){return k>=state.startDate && k<=key && state.entries[k].sober==="sober";}).sort();
+    return keys.length;
+  }
+  function seasonFor(key){var m=Number(key.split("-")[1]),d=Number(key.split("-")[2]),md=m*100+d;if(md>=321&&md<=620)return "Spring";if(md>=621&&md<=922)return "Summer";if(md>=923&&md<=1220)return "Autumn";return "Winter";}
+
+  /* storage: browser localStorage, fully offline + private to this device */
+  function load(){try{var raw=localStorage.getItem(KEY);if(raw)state=JSON.parse(raw);}catch(e){}}
+  function seedVerifiedIfNeeded(){
+    try{
+      var raw=localStorage.getItem(KEY);
+      var alreadyCorrect=false;
+      if(raw){
+        try{
+          var existing=JSON.parse(raw);
+          if(existing && existing.startDate==="2026-01-04" && existing.entries &&
+             Object.keys(existing.entries).length>=173){
+            alreadyCorrect=true;
+          }
+        }catch(e){}
+      }
+      if(!alreadyCorrect){
+        var VERIFIED_STATE={"startDate": "2026-01-04", "offset2026": 0, "longestBest": 82, "monthOffset": 0, "entries": {"2026-01-04": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-01-04T12:00:00.000Z", "intentions": []}, "2026-01-05": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-01-05T12:00:00.000Z", "intentions": []}, "2026-01-06": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-01-06T12:00:00.000Z", "intentions": []}, "2026-01-07": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-01-07T12:00:00.000Z", "intentions": []}, "2026-01-19": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-01-19T12:00:00.000Z", "intentions": []}, "2026-02-03": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-03T12:00:00.000Z", "intentions": []}, "2026-02-11": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-11T12:00:00.000Z", "intentions": []}, "2026-02-18": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-18T12:00:00.000Z", "intentions": []}, "2026-02-19": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-19T12:00:00.000Z", "intentions": []}, "2026-02-20": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-20T12:00:00.000Z", "intentions": []}, "2026-02-21": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-21T12:00:00.000Z", "intentions": []}, "2026-02-22": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-22T12:00:00.000Z", "intentions": []}, "2026-02-23": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-23T12:00:00.000Z", "intentions": []}, "2026-02-24": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-24T12:00:00.000Z", "intentions": []}, "2026-02-25": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-25T12:00:00.000Z", "intentions": []}, "2026-02-26": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-26T12:00:00.000Z", "intentions": []}, "2026-02-27": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-27T12:00:00.000Z", "intentions": []}, "2026-02-28": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-02-28T12:00:00.000Z", "intentions": []}, "2026-03-01": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-01T12:00:00.000Z", "intentions": []}, "2026-03-02": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-02T12:00:00.000Z", "intentions": []}, "2026-03-03": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-03T12:00:00.000Z", "intentions": []}, "2026-03-04": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-04T12:00:00.000Z", "intentions": []}, "2026-03-05": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-05T12:00:00.000Z", "intentions": []}, "2026-03-06": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-06T12:00:00.000Z", "intentions": []}, "2026-03-07": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-07T12:00:00.000Z", "intentions": []}, "2026-03-08": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-08T12:00:00.000Z", "intentions": []}, "2026-03-09": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-09T12:00:00.000Z", "intentions": []}, "2026-03-10": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-10T12:00:00.000Z", "intentions": []}, "2026-03-11": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-11T12:00:00.000Z", "intentions": []}, "2026-03-12": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-12T12:00:00.000Z", "intentions": []}, "2026-03-13": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-13T12:00:00.000Z", "intentions": []}, "2026-03-14": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-14T12:00:00.000Z", "intentions": []}, "2026-03-15": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-15T12:00:00.000Z", "intentions": []}, "2026-03-16": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-16T12:00:00.000Z", "intentions": []}, "2026-03-17": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-17T12:00:00.000Z", "intentions": []}, "2026-03-18": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-18T12:00:00.000Z", "intentions": []}, "2026-03-19": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-19T12:00:00.000Z", "intentions": []}, "2026-03-20": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-20T20:00:00"}, "2026-03-21": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-21T20:00:00"}, "2026-03-22": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-22T20:00:00"}, "2026-03-23": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-23T20:00:00"}, "2026-03-24": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-24T20:00:00"}, "2026-03-25": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-25T20:00:00"}, "2026-03-26": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-26T20:00:00"}, "2026-03-27": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-27T20:00:00"}, "2026-03-28": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-28T20:00:00"}, "2026-03-29": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-29T20:00:00"}, "2026-03-30": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-30T20:00:00"}, "2026-03-31": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-03-31T20:00:00"}, "2026-04-01": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-01T20:00:00"}, "2026-04-02": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-02T20:00:00"}, "2026-04-03": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-03T20:00:00"}, "2026-04-04": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-04T20:00:00"}, "2026-04-05": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-05T20:00:00"}, "2026-04-06": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-06T20:00:00"}, "2026-04-07": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-07T20:00:00"}, "2026-04-08": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-08T20:00:00"}, "2026-04-09": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-09T20:00:00"}, "2026-04-10": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-10T20:00:00"}, "2026-04-11": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-11T20:00:00"}, "2026-04-12": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-12T20:00:00"}, "2026-04-13": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-13T20:00:00"}, "2026-04-14": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-14T20:00:00"}, "2026-04-15": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-15T20:00:00"}, "2026-04-16": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-16T20:00:00"}, "2026-04-17": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-17T20:00:00"}, "2026-04-18": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-18T20:00:00"}, "2026-04-19": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-19T20:00:00"}, "2026-04-20": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-20T20:00:00"}, "2026-04-21": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-21T20:00:00"}, "2026-04-22": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-22T20:00:00"}, "2026-04-23": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-23T20:00:00"}, "2026-04-24": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-24T20:00:00"}, "2026-04-25": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-25T20:00:00"}, "2026-04-26": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-26T20:00:00"}, "2026-04-27": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-27T20:00:00"}, "2026-04-28": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-28T20:00:00"}, "2026-04-29": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-29T20:00:00"}, "2026-04-30": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-04-30T20:00:00"}, "2026-05-01": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-01T20:00:00"}, "2026-05-02": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-02T20:00:00"}, "2026-05-03": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-03T20:00:00"}, "2026-05-04": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-04T20:00:00"}, "2026-05-05": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-05T20:00:00"}, "2026-05-06": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-06T20:00:00"}, "2026-05-07": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-07T20:00:00"}, "2026-05-08": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-08T20:00:00"}, "2026-05-09": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-09T20:00:00"}, "2026-05-10": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-10T20:00:00"}, "2026-05-11": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-11T20:00:00"}, "2026-05-12": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-12T20:00:00"}, "2026-05-13": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-13T20:00:00"}, "2026-05-14": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-14T20:00:00"}, "2026-05-15": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-15T20:00:00"}, "2026-05-16": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-16T20:00:00"}, "2026-05-17": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-17T20:00:00"}, "2026-05-18": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-18T20:00:00"}, "2026-05-19": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-19T20:00:00"}, "2026-05-20": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-20T20:00:00"}, "2026-05-21": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-21T20:00:00"}, "2026-05-22": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-22T20:00:00"}, "2026-05-23": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-23T20:00:00"}, "2026-05-24": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-24T20:00:00"}, "2026-05-25": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-25T20:00:00"}, "2026-05-26": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-26T20:00:00"}, "2026-05-27": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-27T20:00:00"}, "2026-05-28": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-28T20:00:00"}, "2026-05-29": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-29T20:00:00"}, "2026-05-30": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-30T20:00:00"}, "2026-05-31": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-05-31T20:00:00"}, "2026-06-01": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-01T20:00:00"}, "2026-06-02": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-02T20:00:00"}, "2026-06-03": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-03T20:00:00"}, "2026-06-04": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-04T20:00:00"}, "2026-06-05": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-05T20:00:00"}, "2026-06-06": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-06T20:00:00"}, "2026-06-07": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-07T20:00:00"}, "2026-06-08": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-08T20:00:00"}, "2026-06-09": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-09T20:00:00"}, "2026-06-10": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-10T20:00:00"}, "2026-06-11": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-11T20:00:00"}, "2026-06-12": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-12T20:00:00"}, "2026-06-13": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-13T20:00:00"}, "2026-06-14": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-14T20:00:00"}, "2026-06-15": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-15T20:00:00"}, "2026-06-16": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-16T20:00:00"}, "2026-06-17": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-17T20:00:00"}, "2026-06-18": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-18T20:00:00"}, "2026-06-19": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-19T20:00:00"}, "2026-06-20": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-20T20:00:00"}, "2026-06-21": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-21T20:00:00"}, "2026-06-22": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-22T20:00:00"}, "2026-06-23": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-23T20:00:00"}, "2026-06-24": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-24T20:00:00"}, "2026-06-25": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-25T20:00:00"}, "2026-06-26": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-26T20:00:00"}, "2026-06-27": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-27T20:00:00"}, "2026-06-28": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-28T20:00:00"}, "2026-06-29": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-29T20:00:00"}, "2026-06-30": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-06-30T20:00:00"}, "2026-07-01": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-01T20:00:00"}, "2026-07-02": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-02T20:00:00"}, "2026-07-03": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-03T20:00:00"}, "2026-07-04": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-04T20:00:00"}, "2026-07-05": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-05T20:00:00"}, "2026-07-06": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-06T20:00:00"}, "2026-07-07": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-07T20:00:00"}, "2026-07-08": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-08T20:00:00"}, "2026-07-09": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-09T20:00:00"}, "2026-07-10": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-10T20:00:00"}, "2026-07-11": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-11T20:00:00"}, "2026-07-12": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-12T20:00:00"}, "2026-07-13": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-13T20:00:00"}, "2026-07-14": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-14T20:00:00"}, "2026-07-15": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-15T20:00:00"}, "2026-07-16": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-16T20:00:00"}, "2026-07-17": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-17T20:00:00"}, "2026-07-18": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-18T20:00:00"}, "2026-07-19": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-19T20:00:00"}, "2026-07-20": {"sober": "used", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-20T20:00:00"}, "2026-07-21": {"sober": "sober", "current": "3", "urge": "whisper", "feelings": ["hopeful", "proud", "grateful", "overwhelmed"], "triggers": ["boredom", "celebration"], "skills": ["walked / moved", "called someone"], "journal": "What am I grateful I did today?\ni am grateful i practiced yoga nidra with elisha :)\n\nI am grateful I am on this sober journey. Thanks Julie!", "savedAt": "2026-07-21T19:13:45.296Z", "intentions": []}, "2026-07-22": {"sober": "sober", "current": "3", "urge": "none", "feelings": ["raw"], "triggers": ["late night"], "skills": ["yoga nidra", "walked / moved", "called someone", "breathwork"], "journal": "", "savedAt": "2026-07-23T16:08:46.180Z", "intentions": []}, "2026-07-23": {"sober": "sober", "current": "4", "urge": "whisper", "feelings": ["physically ill"], "triggers": ["perfectionism"], "skills": ["yoga nidra", "walked / moved"], "journal": "", "savedAt": "2026-07-24T16:14:56.122Z", "intentions": []}, "2026-07-24": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-27T17:42:37.249Z", "intentions": []}, "2026-07-25": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-27T17:42:29.333Z", "intentions": []}, "2026-07-26": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-07-27T17:42:23.300Z", "intentions": []}, "2026-07-27": {"sober": "sober", "current": "4", "urge": "none", "feelings": ["raw", "proud", "tender"], "triggers": [], "skills": ["yoga nidra", "loving kindness", "reading", "friends"], "journal": "One thing I did today that survival-me would have smoked through or avoided:\nmeal prepping with Elisha. going to a social event.", "savedAt": "2026-07-27T22:50:42.021Z", "intentions": []}, "2026-07-28": {"sober": "sober", "current": "5", "urge": "pull", "feelings": ["grounded", "anxious", "hopeful", "clear", "content", "overwhelmed"], "triggers": ["stress", "anxiety", "inaction", "lack of productivity"], "skills": ["walked / moved", "called someone", "loving kindness", "productivity"], "journal": "What did the hard part feel like in my body, and what happened when I stayed with it?\nanxiety, racing heart, self-hate, fear. I wanted to run and hide and ignore all my problems. i wanted to cuddle up in bed and dissasociate with Dexter content\nWhat am I grateful I did today?\ni went to the library with Elisha. I did real work for my clients. I caught up Atharii admin to-dos. I read my tarot and practiced loving kindness. I ate three full meals. I ran in the morning and walked 6 miles in the evening. i did life admin and helped Emily in the evening. i spoke with Emily on the phone and connected.", "savedAt": "2026-07-29T04:39:21.094Z", "intentions": []}, "2026-07-29": {"sober": "sober", "current": "4", "urge": "knuckle", "feelings": ["joyful", "grateful", "alive", "tired"], "triggers": ["boredom", "stress", "late night", "productivity"], "skills": ["yoga nidra", "walked / moved", "social interactions", "ride the wave"], "journal": "What am I grateful I did today?\nspent time with the roommates and played games\ncleaned my room thanks to Elisha's encouragement\nshowered", "savedAt": "2026-07-30T04:48:54.606Z", "intentions": []}, "2026-07-30": {"sober": "sober", "current": "3", "urge": "none", "feelings": ["grounded", "joyful", "grateful", "content"], "triggers": [], "skills": ["walked / moved", "social interactions", "productivity", "doing without thinking"], "journal": "Something I love or respect about myself right now:\ni am actively changing the brain chemistry. i am doing hard things. I am acknowledging the good coming to me. i am chagning the thought patterns. I am being super active. i being social. i am giving myself grace. i am putting myself out there. i am being productive. proud of you boo <3", "savedAt": "2026-07-31T04:24:27.310Z", "intentions": []}, "2026-07-31": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-08-01T21:26:54.615Z", "intentions": []}, "2026-08-01": {"sober": "sober", "current": null, "urge": null, "feelings": [], "triggers": [], "skills": [], "journal": "", "savedAt": "2026-08-03T03:17:45.159Z", "intentions": []}, "2026-08-02": {"sober": "sober", "current": "3", "urge": "none", "feelings": ["grounded", "hopeful", "proud", "grateful", "content"], "triggers": [], "skills": ["yoga nidra", "walked / moved", "social", "productive"], "journal": "", "savedAt": "2026-08-03T03:18:54.992Z", "intentions": []}}, "customFeelings": [], "customTriggers": [], "customSkills": []};
+        localStorage.setItem(KEY,JSON.stringify(VERIFIED_STATE));
+      }
+    }catch(e){}
+  }
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){alert("Could not save. If you're in private browsing, your entries won't persist. Export regularly to keep a copy.");}}
+
+  /* ---- counters ---- */
+  function computeCounters(asOf){
+    // asOf: optional YYYY-MM-DD. When given, counters are computed as they stood
+    // on that day (days after asOf are ignored), so viewing a past day rewinds the header.
+    var ref = asOf || todayKey();
+    var keys=Object.keys(state.entries).filter(function(k){return k<=ref;}).sort();
+    var total=0, y2026=0, monthCount=0;
+    var refMonth=ref.slice(0,7);
+    keys.forEach(function(k){
+      var e=state.entries[k];
+      if(e.sober==="sober"){total++; if(k.slice(0,4)==="2026")y2026++; if(k.slice(0,7)===refMonth)monthCount++;}
+    });
+    // current streak: walk backward over consecutive sober days ending at ref.
+    // An unlogged ref-day does not break the streak (the day just isn't finished yet),
+    // so if ref has no entry we start counting from the day before.
+    var streak=0;
+    var d=new Date(ref+"T00:00:00");
+    if(!state.entries[ref]){ d.setDate(d.getDate()-1); }
+    while(true){
+      var k=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+      var e=state.entries[k];
+      if(e&&e.sober==="sober"){streak++; d.setDate(d.getDate()-1);}
+      else break;
+    }
+    // sober rate in 2026: sober days this year / days elapsed this year (incl. offset)
+    var now=new Date(ref+"T00:00:00");
+    var elapsed2026 = now.getFullYear()===2026
+      ? Math.floor((now - new Date("2026-01-01T00:00:00"))/86400000)+1
+      : 366;
+    // longest streak: longest run of consecutive sober dates
+    var longest=0, run=0, prev=null;
+    keys.forEach(function(k){
+      if(state.entries[k].sober!=="sober"){ prev=null; run=0; return; }
+      if(prev){
+        var gap=Math.round((new Date(k+"T00:00:00")-new Date(prev+"T00:00:00"))/86400000);
+        run = gap===1 ? run+1 : 1;
+      } else run=1;
+      if(run>longest)longest=run;
+      prev=k;
+    });
+    longest=Math.max(longest, state.longestBest||0);
+    var soberY = y2026 + (state.offset2026||0);
+    var pct = elapsed2026>0 ? Math.round((soberY/elapsed2026)*100) : 0;
+    if(pct>100)pct=100;
+    return {streak:streak, longest:longest, y2026:soberY, month:monthCount+(state.monthOffset||0), total:total+(state.offset2026||0), pct:pct, elapsed:elapsed2026};
+  }
+
+  /* ---- seasonal ring ----
+     Sweeps the full calendar year (Jan 1 -> Dec 31), one arc segment per day.
+     A day is colored in if that date is logged sober in state.entries.
+     This shows the whole year's pattern at a glance, not just the current streak. */
+  function isLeapYear(y){return (y%4===0&&y%100!==0)||y%400===0;}
+  function yearLength(y){return isLeapYear(y)?366:365;}
+  function dayOfYear(key){
+    var p=key.split("-").map(Number);
+    var d=new Date(p[0],p[1]-1,p[2]);
+    var start=new Date(p[0],0,1);
+    return Math.floor((d-start)/86400000)+1;
+  }
+  function polarXY(cx,cy,r,angleDeg){var rad=angleDeg*Math.PI/180;return [cx+r*Math.cos(rad),cy+r*Math.sin(rad)];}
+  function seasonColorAt(t){
+    // t is 0..1 through the year; blends across the same four season hues used elsewhere in the UI
+    var stops=[{p:0,c:"#7d9070"},{p:.25,c:"#c9a24b"},{p:.5,c:"#c15a3a"},{p:.75,c:"#5a5470"},{p:1,c:"#7d9070"}];
+    for(var i=0;i<stops.length-1;i++){
+      var a=stops[i],b=stops[i+1];
+      if(t>=a.p&&t<=b.p){
+        var lt=(t-a.p)/(b.p-a.p);
+        var ah=hexToRgb(a.c),bh=hexToRgb(b.c);
+        return rgbToHex(ah[0]+(bh[0]-ah[0])*lt, ah[1]+(bh[1]-ah[1])*lt, ah[2]+(bh[2]-ah[2])*lt);
+      }
+    }
+    return stops[0].c;
+  }
+  function hexToRgb(h){h=h.replace("#","");return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];}
+  function rgbToHex(r,g,b){function h(v){v=Math.round(v);return (v<16?"0":"")+v.toString(16);}return "#"+h(r)+h(g)+h(b);}
+
+  function drawRing(asOf){
+    var ring=$("#season-ring"); if(!ring) return;
+    var C=150,R=130;
+    var tk=asOf||todayKey();
+    var year=Number(tk.slice(0,4));
+    var yl=yearLength(year);
+    var anglePerDay=360/yl;
+    var todayDoy=dayOfYear(tk);
+
+    // background track: a full ring of short, faint tick marks, one per day of the year,
+    // so the un-elapsed / not-sober days are still visibly "there" as individual days, just unfilled
+    var html='';
+    var tickInner=R-8, tickOuterFaint=R+5;
+    for(var bg=1;bg<=yl;bg++){
+      var ang=(bg-1)*anglePerDay;
+      var b1=polarXY(C,C,tickInner,ang), b2=polarXY(C,C,tickOuterFaint,ang);
+      html+='<line x1="'+b1[0].toFixed(2)+'" y1="'+b1[1].toFixed(2)+'" x2="'+b2[0].toFixed(2)+'" y2="'+b2[1].toFixed(2)+'" stroke="#d6cab2" stroke-opacity="0.6" stroke-width="1.4"/>';
+    }
+
+    // one bold tick per sober day, drawn taller and thicker so each day reads as a distinct, countable mark
+    var tickOuterBold=R+16;
+    for(var doy=1;doy<=todayDoy;doy++){
+      var d=new Date(year,0,doy);
+      var key=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+      var e=state.entries[key];
+      if(e&&e.sober==="sober"){
+        var t=(doy-1)/(yl-1);
+        var color=seasonColorAt(t);
+        var ang2=(doy-1)*anglePerDay;
+        var p1=polarXY(C,C,tickInner,ang2), p2=polarXY(C,C,tickOuterBold,ang2);
+        html+='<line x1="'+p1[0].toFixed(2)+'" y1="'+p1[1].toFixed(2)+'" x2="'+p2[0].toFixed(2)+'" y2="'+p2[1].toFixed(2)+'" stroke="'+color+'" stroke-width="3.2" stroke-linecap="round"/>';
+      }
+      // non-sober elapsed days: only the faint background tick shows, no bold mark drawn
+    }
+
+    // today marker
+    var todayAngle=(todayDoy-1)*anglePerDay;
+    var hp=polarXY(C,C,R+14,todayAngle);
+    html+='<circle cx="'+hp[0].toFixed(2)+'" cy="'+hp[1].toFixed(2)+'" r="5.5" fill="#f3ecdd" stroke="#1f2d26" stroke-width="1.8"/>';
+
+    ring.innerHTML=html;
+  }
+
+  /* ---- north star ---- */
+  function nsText(){return (state.northStar!=null&&state.northStar!=="")?state.northStar:DEFAULT_NORTH_STAR;}
+  function nsColor(){return state.northStarColor||DEFAULT_NS_COLOR;}
+  function clamp255(v){return Math.max(0,Math.min(255,Math.round(v)));}
+  function lighten(hex,amt){
+    var h=hex.replace("#","");
+    var r=parseInt(h.slice(0,2),16),g=parseInt(h.slice(2,4),16),b=parseInt(h.slice(4,6),16);
+    r=clamp255(r+(255-r)*amt);g=clamp255(g+(255-g)*amt);b=clamp255(b+(255-b)*amt);
+    function hx(v){return (v<16?"0":"")+v.toString(16);}
+    return "#"+hx(r)+hx(g)+hx(b);
+  }
+  function nsGradient(base){return "linear-gradient(160deg,"+base+" 0%,"+lighten(base,.22)+" 55%,"+lighten(base,.42)+" 100%)";}
+  function applyNorthStar(){
+    var grad=nsGradient(nsColor());
+    var block=$("#star-block"); if(block){block.style.background=grad;}
+    var txt=$("#star-text"); if(txt){txt.textContent=nsText();}
+    var pv=$("#ns-preview"); if(pv){pv.style.background=grad;}
+    var pvt=$("#ns-preview-text"); if(pvt){pvt.textContent=nsText();}
+  }
+  function renderNorthStarSettings(){
+    var ta=$("#ns-text-input"); if(ta){ta.value=(state.northStar!=null?state.northStar:DEFAULT_NORTH_STAR);}
+    var ci=$("#ns-color-input"); if(ci){ci.value=nsColor();}
+    var sw=$("#ns-swatches");
+    if(sw){
+      sw.innerHTML="";
+      NS_PRESETS.forEach(function(col){
+        var b=document.createElement("button");
+        b.className="ns-swatch"+(col.toLowerCase()===nsColor().toLowerCase()?" sel":"");
+        b.style.background=nsGradient(col);
+        b.setAttribute("aria-label","use color "+col);
+        b.addEventListener("click",function(){
+          state.northStarColor=col;save();applyNorthStar();renderNorthStarSettings();
+        });
+        sw.appendChild(b);
+      });
+    }
+    applyNorthStar();
+  }
+
+  /* ---- chips ---- */
+  function mkChip(label,kind){var b=document.createElement("button");b.className="chip"+(kind==="trig"?" trig":kind==="skill"?" skill":"");b.textContent=label;b.dataset.val=label;b.dataset.kind=kind;b.addEventListener("click",function(){b.classList.toggle("sel");});return b;}
+  function renderChips(){
+    var fg=$("#feeling-grid");fg.innerHTML="";(state.feelingList||FEELINGS).forEach(function(f){fg.appendChild(mkChip(f,"feeling"));});
+    var tg=$("#trigger-grid");tg.innerHTML="";(state.triggerList||TRIGGERS).forEach(function(t){tg.appendChild(mkChip(t,"trig"));});
+    var sg=$("#skill-grid");sg.innerHTML="";(state.skillList||SKILLS).forEach(function(s){sg.appendChild(mkChip(s,"skill"));});
+  }
+
+  function renderManageChipList(listKey,mountId){
+    var mount=$(mountId); if(!mount) return;
+    var arr=state[listKey]||[];
+    mount.innerHTML="";
+    arr.forEach(function(label,i){
+      var chip=document.createElement("div");chip.className="manage-chip";
+      var span=document.createElement("span");span.textContent=label;
+      var x=document.createElement("button");x.className="mc-x";x.textContent="\u00d7";x.setAttribute("aria-label","remove "+label);
+      x.addEventListener("click",function(){
+        state[listKey].splice(i,1);save();
+        renderManageChipList(listKey,mountId);
+        renderSelectedPreserving();
+      });
+      chip.appendChild(span);chip.appendChild(x);mount.appendChild(chip);
+    });
+  }
+  // Re-render the Today chips but keep whatever the user currently has selected in the form.
+  function renderSelectedPreserving(){
+    var sel={
+      feelings:$$("#feeling-grid .chip.sel").map(function(c){return c.dataset.val;}),
+      triggers:$$("#trigger-grid .chip.sel").map(function(c){return c.dataset.val;}),
+      skills:$$("#skill-grid .chip.sel").map(function(c){return c.dataset.val;})
+    };
+    renderChips();
+    $$("#feeling-grid .chip").forEach(function(c){c.classList.toggle("sel",sel.feelings.indexOf(c.dataset.val)>=0);});
+    $$("#trigger-grid .chip").forEach(function(c){c.classList.toggle("sel",sel.triggers.indexOf(c.dataset.val)>=0);});
+    $$("#skill-grid .chip").forEach(function(c){c.classList.toggle("sel",sel.skills.indexOf(c.dataset.val)>=0);});
+  }
+  function renderManageLists(){
+    renderManageChipList("feelingList","#manage-feelings");
+    renderManageChipList("triggerList","#manage-triggers");
+    renderManageChipList("skillList","#manage-skills");
+    var sd=$("#settings-start-date");
+    if(sd)sd.value=state.startDate||todayKey();
+    var note=$("#settings-start-note");
+    if(note)note.textContent=state.startDate?("Counting from "+fmtDate(state.startDate)+"."):"";
+  }
+  function addManageItem(listKey,inputId,mountId){
+    var inp=$(inputId);if(!inp)return;var v=inp.value.trim();if(!v)return;
+    if(!Array.isArray(state[listKey]))state[listKey]=[];
+    if(state[listKey].indexOf(v)<0)state[listKey].push(v);
+    inp.value="";save();
+    renderManageChipList(listKey,mountId);
+    renderSelectedPreserving();
+  }
+
+  function loadDayIntoForm(key){
+    var e=state.entries[key]||{};
+    $$(".sober-btn").forEach(function(b){b.classList.toggle("sel",e.sober===b.dataset.v);});
+    $$(".cur-btn").forEach(function(b){b.classList.toggle("sel",String(e.current)===b.dataset.cur);});
+    $$(".urge-btn").forEach(function(b){b.classList.toggle("sel",e.urge===b.dataset.urge);});
+    $("#journal").value=e.journal||"";
+    $$("#feeling-grid .chip").forEach(function(c){c.classList.toggle("sel",(e.feelings||[]).indexOf(c.dataset.val)>=0);});
+    $$("#trigger-grid .chip").forEach(function(c){c.classList.toggle("sel",(e.triggers||[]).indexOf(c.dataset.val)>=0);});
+    $$("#skill-grid .chip").forEach(function(c){c.classList.toggle("sel",(e.skills||[]).indexOf(c.dataset.val)>=0);});
+  }
+
+  function collectForm(){
+    var cur=$("#current-scale .sel"),urg=$("#urge-row .sel"),sob=$("#sober-row .sel");
+    return {
+      sober: sob?sob.dataset.v:null,
+      current: cur?cur.dataset.cur:null,
+      urge: urg?urg.dataset.urge:null,
+      feelings: $$("#feeling-grid .chip.sel").map(function(c){return c.dataset.val;}),
+      triggers: $$("#trigger-grid .chip.sel").map(function(c){return c.dataset.val;}),
+      skills: $$("#skill-grid .chip.sel").map(function(c){return c.dataset.val;}),
+      journal: $("#journal").value.trim(),
+      savedAt:new Date().toISOString()
+    };
+  }
+
+  /* ---- accountability ---- */
+  function getAcct(key){return (state.entries[key]||{}).intentions||[];}
+  function setAcct(key,arr){if(!state.entries[key])state.entries[key]={};state.entries[key].intentions=arr;}
+  function renderAcct(){
+    var list=$("#acct-list"); if(!list) return;
+    var key=todayKey(),items=getAcct(key);
+    if(items.length===0){list.innerHTML='<div class="acct-empty">Nothing yet. Name one thing you did today, however small.</div>';return;}
+    list.innerHTML="";
+    items.forEach(function(it,i){
+      var row=document.createElement("div");row.className="acct-item"+(it.done?" done":"");
+      row.innerHTML='<button class="acct-check">'+(it.done?"\u2713":"")+'</button><span class="acct-text"></span><button class="acct-del">\u00d7</button>';
+      row.querySelector(".acct-text").textContent=it.text;
+      row.querySelector(".acct-check").addEventListener("click",function(){items[i].done=!items[i].done;setAcct(key,items);save();renderAcct();});
+      row.querySelector(".acct-del").addEventListener("click",function(){items.splice(i,1);setAcct(key,items);save();renderAcct();});
+      list.appendChild(row);
+    });
+  }
+  function addAcct(){var inp=$("#acct-add");if(!inp)return;var v=inp.value.trim();if(!v)return;var key=todayKey(),items=getAcct(key);items.push({text:v,done:false});setAcct(key,items);inp.value="";save();renderAcct();}
+
+  /* ---- header ---- */
+  function renderHeader(asOf){
+    var tk=asOf||todayKey();
+    var c=computeCounters(tk);
+    $("#day-num").textContent=c.streak;
+    $("#season-name").textContent=seasonFor(tk);
+    $("#date-today").textContent=fmtDate(tk);
+    drawRing(tk);
+    $("#milestone").textContent=milestoneText(c.streak,tk);
+    $("#c-longest").textContent=c.longest;
+    $("#c-month").textContent=c.month;
+    $("#c-total").textContent=c.total;
+    var pl=$("#pct-line");
+    if(pl){
+      var msg;
+      if(c.y2026===0){ msg="Your first sober day this year writes the number."; }
+      else if(c.pct>=90){ msg="<b>"+c.pct+"%</b> of 2026 lived awake. This is who you are now."; }
+      else if(c.pct>=75){ msg="<b>"+c.pct+"%</b> of 2026 lived awake. The clean days are the rule, not the exception."; }
+      else if(c.pct>=50){ msg="<b>"+c.pct+"%</b> of 2026 lived awake. More than half, and climbing."; }
+      else { msg="<b>"+c.pct+"%</b> of 2026 lived awake. Every clean day lifts it."; }
+      pl.innerHTML=msg;
+    }
+  }
+  function milestoneText(dn,asOf){
+    var marks={1:"Day one. The bravest one.",7:"A full week awake.",14:"Two weeks. The fog is lifting.",30:"A month. Your baseline is yours again.",60:"Sixty days. Growth you can feel.",90:"Ninety days. A whole season.",100:"One hundred days.",180:"Half a year, every season so far.",270:"Three seasons deep.",365:"A full year. Every season, awake. You did this."};
+    if(marks[dn])return marks[dn];
+    var s=seasonFor(asOf||todayKey());
+    var lines={"Winter":"Winter tests the most. You're still here.","Spring":"Something in you is growing back.","Summer":"Long light. Stay with it.","Autumn":"The season turns. So do you."};
+    var nexts=[7,14,30,60,90,180,270,365],nxt=null;
+    for(var i=0;i<nexts.length;i++){if(nexts[i]>dn){nxt=nexts[i];break;}}
+    if(nxt&&(nxt-dn)<=3)return (nxt-dn)+" day"+((nxt-dn)>1?"s":"")+" to "+nxt+".";
+    return lines[s]||"";
+  }
+
+  /* ---- almanac ---- */
+  function renderAlmanac(){
+    var keys=Object.keys(state.entries).sort().reverse();
+    var c=computeCounters();
+    var skillCount={},urgeHeld=0;
+    keys.forEach(function(k){var e=state.entries[k];(e.skills||[]).forEach(function(s){skillCount[s]=(skillCount[s]||0)+1;});if(e.urge&&e.urge!=="none")urgeHeld++;});
+    var topSkill=Object.keys(skillCount).sort(function(a,b){return skillCount[b]-skillCount[a];})[0];
+    var stats=[[c.streak,"current streak"],[c.y2026,"days sober in 2026"],[urgeHeld,"urges met + held"],[topSkill||"\u2014","most-used skill"]];
+    $("#almanac-stats").innerHTML=stats.map(function(s){return '<div class="stat"><div class="stat-num" style="'+(String(s[0]).length>7?"font-size:18px;":"")+'">'+s[0]+'</div><div class="stat-lbl">'+s[1]+'</div></div>';}).join("");
+    var list=$("#entries-list");
+    if(keys.length===0){list.innerHTML='<div class="empty-note">No entries yet. Today is a good day to begin. Even one line counts.</div>';return;}
+    list.innerHTML=keys.map(function(k){
+      var e=state.entries[k];
+      var dayLabel=e.sober==="sober"?('<span class="entry-day">Day '+soberDayNumber(k)+'</span>'):'';
+      var sober=e.sober?'<span class="entry-sober '+(e.sober==="sober"?"s":"u")+'">'+e.sober+'</span>':"";
+      var ft=(e.feelings||[]).map(function(f){return '<span class="etag f">'+f+'</span>';}).join("");
+      var tt=(e.triggers||[]).map(function(t){return '<span class="etag t">'+t+'</span>';}).join("");
+      var st=(e.skills||[]).map(function(s){return '<span class="etag s">'+s+'</span>';}).join("");
+      var meta=[];
+      if(e.current&&CURRENT_LABELS[e.current])meta.push('<span class="entry-meta-item"><span class="entry-meta-label">thoughts</span><span class="etag c">'+CURRENT_LABELS[e.current]+'</span></span>');
+      if(e.urge&&URGE_LABELS[e.urge])meta.push('<span class="entry-meta-item"><span class="entry-meta-label">urge</span><span class="etag u">'+URGE_LABELS[e.urge]+'</span></span>');
+      var mr=meta.length?'<div class="entry-meta">'+meta.join("")+'</div>':"";
+      var jr=e.journal?'<div class="entry-journal">'+escapeHtml(e.journal)+'</div>':"";
+      return '<div class="entry" data-key="'+k+'"><div class="entry-top">'+dayLabel+'<span class="entry-date">'+fmtDate(k)+'</span>'+sober+'<span class="entry-actions"><button class="entry-edit" data-key="'+k+'">edit</button><button class="entry-del" data-key="'+k+'">delete</button></span></div>'+mr+((ft||tt||st)?'<div class="entry-tags">'+ft+tt+st+'</div>':"")+jr+'</div>';
+    }).join("");
+    // wire edit + delete
+    $$("#entries-list .entry-edit").forEach(function(b){b.addEventListener("click",function(){startEdit(b.dataset.key);});});
+    $$("#entries-list .entry-del").forEach(function(b){b.addEventListener("click",function(){deleteEntry(b.dataset.key);});});
+  }
+
+  function startEdit(key){
+    editingKey=key;
+    var ed=$("#entry-date"); if(ed){ed.value=key;var n=$("#date-note");if(n)n.textContent=(key===todayKey()?"Logging today.":"Logging "+fmtDate(key)+".");}
+    loadDayIntoForm(key);
+    renderHeader(key);
+    $$(".tab").forEach(function(x){x.classList.remove("active");});
+    var todayTab=$$(".tab").filter(function(t){return t.dataset.view==="today";})[0];
+    if(todayTab)todayTab.classList.add("active");
+    $("#today-view").classList.remove("hidden");
+    $("#almanac-view").classList.add("hidden");
+    $("#settings-view").classList.add("hidden");
+    updateEditBanner();
+    window.scrollTo({top:0,behavior:"smooth"});
+  }
+
+  function deleteEntry(key){
+    var e=state.entries[key];
+    var label=fmtDate(key);
+    if(!confirm("Delete the entry for "+label+"? This cannot be undone."))return;
+    delete state.entries[key];
+    if(editingKey===key){editingKey=null;updateEditBanner();loadDayIntoForm(todayKey());}
+    save();renderAlmanac();renderHeader();
+  }
+
+  function updateEditBanner(){
+    var banner=$("#edit-banner");
+    if(!banner)return;
+    if(editingKey && editingKey!==todayKey()){
+      banner.innerHTML='Editing '+fmtDate(editingKey)+' &nbsp;<button id="edit-cancel" class="edit-cancel">back to today</button>';
+      banner.classList.remove("hidden");
+      var cx=$("#edit-cancel");if(cx)cx.addEventListener("click",function(){editingKey=null;loadDayIntoForm(todayKey());var ed2=$("#entry-date");if(ed2){ed2.value=todayKey();var n2=$("#date-note");if(n2)n2.textContent="Logging today.";}renderHeader();updateEditBanner();});
+      $("#save-btn").textContent="Save changes to "+fmtDate(editingKey).replace(/,.*/,"");
+    }else{
+      banner.classList.add("hidden");
+      $("#save-btn").textContent="Save today";
+    }
+  }
+  function escapeHtml(s){return s.replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+
+  /* ---- export ---- */
+  function exportBackup(){
+    // structured, re-importable backup of everything
+    var payload={_type:"beck_sober_almanac_backup",_version:1,exportedAt:new Date().toISOString(),state:state};
+    var blob=new Blob([JSON.stringify(payload,null,2)],{type:"application/json"});
+    var url=URL.createObjectURL(blob),a=document.createElement("a");
+    a.href=url;a.download="almanac-backup-"+todayKey()+".json";
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+    setTimeout(function(){URL.revokeObjectURL(url);},1000);
+  }
+
+  function importBackup(file){
+    var reader=new FileReader();
+    reader.onload=function(){
+      var incoming;
+      try{ incoming=JSON.parse(reader.result); }
+      catch(e){ alert("That file could not be read. Make sure it's an almanac-backup .json file."); return; }
+      var inState = incoming && incoming.state ? incoming.state : incoming;
+      if(!inState || typeof inState!=="object" || !inState.entries){
+        alert("That doesn't look like an almanac backup. Nothing was changed."); return;
+      }
+      var mineCount=Object.keys(state.entries||{}).length;
+      var theirCount=Object.keys(inState.entries||{}).length;
+      if(!confirm("Import backup? It has "+theirCount+" day(s). Your current data has "+mineCount+" day(s). Entries will be merged; if the same day exists in both, the imported one wins. Your other days are kept.")) return;
+      // merge entries (imported wins on conflict)
+      var merged={};
+      Object.keys(state.entries||{}).forEach(function(k){merged[k]=state.entries[k];});
+      Object.keys(inState.entries||{}).forEach(function(k){merged[k]=inState.entries[k];});
+      state.entries=merged;
+      // merge custom word lists (union)
+      function union(a,b){var s={},o=[];(a||[]).concat(b||[]).forEach(function(x){if(!s[x]){s[x]=1;o.push(x);}});return o;}
+      state.customFeelings=union(state.customFeelings,inState.customFeelings);
+      state.customTriggers=union(state.customTriggers,inState.customTriggers);
+      state.customSkills=union(state.customSkills,inState.customSkills);
+      // union the editable option lists so imported custom options come along
+      if(inState.feelingList)state.feelingList=union(state.feelingList,inState.feelingList);
+      if(inState.triggerList)state.triggerList=union(state.triggerList,inState.triggerList);
+      if(inState.skillList)state.skillList=union(state.skillList,inState.skillList);
+      // adopt north star only if we don't already have one set
+      if((state.northStar==null||state.northStar==="") && inState.northStar) state.northStar=inState.northStar;
+      if(!state.northStarColor && inState.northStarColor) state.northStarColor=inState.northStarColor;
+      // adopt start date / offset only if we don't have one
+      if(!state.startDate && inState.startDate) state.startDate=inState.startDate;
+      if((!state.offset2026||state.offset2026===0) && inState.offset2026) state.offset2026=inState.offset2026;
+      save();
+      migrateLists();
+      renderChips();loadDayIntoForm(todayKey());renderAcct();renderHeader();applyNorthStar();
+      if($("#settings-view")&&!$("#settings-view").classList.contains("hidden")){renderManageLists();renderNorthStarSettings();}
+      alert("Imported. You now have "+Object.keys(state.entries).length+" day(s) of entries on this device.");
+    };
+    reader.readAsText(file);
+  }
+
+  function exportReadable(){
+    var keys=Object.keys(state.entries).sort();
+    var c=computeCounters();
+    var out="THE SOBER ALMANAC \u2014 BECK\n";
+    out+="North Star: "+nsText()+"\n";
+    out+="Journey began: "+(state.startDate?fmtDate(state.startDate):"\u2014")+"\n";
+    out+="Exported: "+new Date().toLocaleString()+"\n";
+    out+="Sober streak: "+c.streak+"  |  Longest streak: "+c.longest+"  |  Sober in 2026: "+c.y2026+" ("+c.pct+"%)  |  Sober total: "+c.total+"\n";
+    out+="\n"+Array(53).join("=")+"\n\n";
+    if(keys.length===0)out+="No entries yet.\n";
+    var cm={"1":"still","2":"gentle","3":"moving","4":"fast","5":"rapids"};
+    keys.forEach(function(k){
+      var e=state.entries[k],dn=soberDayNumber(k);
+      out+="DAY "+(dn>0?dn:0)+"  \u00b7  "+fmtDate(k)+"  ("+seasonFor(k)+")\n"+Array(45).join("-")+"\n";
+      if(e.sober)out+="Sober? "+e.sober+"\n";
+      if(e.current)out+="Current of thoughts: "+(cm[e.current]||e.current)+"\n";
+      if(e.feelings&&e.feelings.length)out+="Alive in me: "+e.feelings.join(", ")+"\n";
+      if(e.urge)out+="Urge: "+(URGE_LABELS[e.urge]||e.urge)+"\n";
+      if(e.triggers&&e.triggers.length)out+="Pushed back: "+e.triggers.join(", ")+"\n";
+      if(e.skills&&e.skills.length)out+="Skills that helped: "+e.skills.join(", ")+"\n";
+      if(e.journal)out+="\n"+e.journal+"\n";
+      out+="\n";
+    });
+    var blob=new Blob([out],{type:"text/plain;charset=utf-8"});
+    var url=URL.createObjectURL(blob),a=document.createElement("a");
+    a.href=url;a.download="sober-almanac-"+todayKey()+".txt";
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+    setTimeout(function(){URL.revokeObjectURL(url);},1000);
+  }
+
+  /* ---- wire ---- */
+  function wire(){
+    $("#sober-row").addEventListener("click",function(e){var b=e.target.closest(".sober-btn");if(!b)return;var on=b.classList.contains("sel");$$(".sober-btn").forEach(function(x){x.classList.remove("sel");});if(!on)b.classList.add("sel");});
+    $("#current-scale").addEventListener("click",function(e){var b=e.target.closest(".cur-btn");if(!b)return;var on=b.classList.contains("sel");$$(".cur-btn").forEach(function(x){x.classList.remove("sel");});if(!on)b.classList.add("sel");});
+    $("#urge-row").addEventListener("click",function(e){var b=e.target.closest(".urge-btn");if(!b)return;var on=b.classList.contains("sel");$$(".urge-btn").forEach(function(x){x.classList.remove("sel");});if(!on)b.classList.add("sel");});
+
+    function addCustom(inputId,listKey,kind,gridId){var inp=$(inputId);inp.addEventListener("keydown",function(ev){if(ev.key==="Enter"&&inp.value.trim()){var v=inp.value.trim();if(!Array.isArray(state[listKey]))state[listKey]=[];if(state[listKey].indexOf(v)<0)state[listKey].push(v);var c=mkChip(v,kind);c.classList.add("sel");$(gridId).appendChild(c);inp.value="";save();if($("#settings-view")&&!$("#settings-view").classList.contains("hidden"))renderManageLists();}});}
+    addCustom("#feeling-add","feelingList","feeling","#feeling-grid");
+    addCustom("#trigger-add","triggerList","trig","#trigger-grid");
+    addCustom("#skill-add","skillList","skill","#skill-grid");
+
+    // settings: manage trigger + skill lists
+    var mfBtn=$("#manage-feeling-btn"),mfInp=$("#manage-feeling-add");
+    if(mfBtn)mfBtn.addEventListener("click",function(){addManageItem("feelingList","#manage-feeling-add","#manage-feelings");});
+    if(mfInp)mfInp.addEventListener("keydown",function(ev){if(ev.key==="Enter")addManageItem("feelingList","#manage-feeling-add","#manage-feelings");});
+    var mtBtn=$("#manage-trigger-btn"),mtInp=$("#manage-trigger-add");
+    if(mtBtn)mtBtn.addEventListener("click",function(){addManageItem("triggerList","#manage-trigger-add","#manage-triggers");});
+    if(mtInp)mtInp.addEventListener("keydown",function(ev){if(ev.key==="Enter")addManageItem("triggerList","#manage-trigger-add","#manage-triggers");});
+    var msBtn=$("#manage-skill-btn"),msInp=$("#manage-skill-add");
+    if(msBtn)msBtn.addEventListener("click",function(){addManageItem("skillList","#manage-skill-add","#manage-skills");});
+    if(msInp)msInp.addEventListener("keydown",function(ev){if(ev.key==="Enter")addManageItem("skillList","#manage-skill-add","#manage-skills");});
+
+    // settings: north star
+    var nsTa=$("#ns-text-input");
+    if(nsTa)nsTa.addEventListener("input",function(){
+      state.northStar=nsTa.value;save();applyNorthStar();
+    });
+    var nsCi=$("#ns-color-input");
+    if(nsCi)nsCi.addEventListener("input",function(){
+      state.northStarColor=nsCi.value;save();applyNorthStar();
+      // update swatch selection state without rebuilding the picker mid-drag
+      $$("#ns-swatches .ns-swatch").forEach(function(b){b.classList.remove("sel");});
+    });
+
+    // settings: start date
+    var ssd=$("#settings-start-date");
+    if(ssd)ssd.addEventListener("change",function(){
+      if(!ssd.value)return;
+      state.startDate=ssd.value;save();
+      var note=$("#settings-start-note");if(note)note.textContent="Counting from "+fmtDate(ssd.value)+".";
+      renderHeader();
+    });
+
+    // settings: data buttons
+    var sExp=$("#settings-export-btn");if(sExp)sExp.addEventListener("click",exportBackup);
+    var sImpBtn=$("#settings-import-btn"),sImpFile=$("#settings-import-file");
+    if(sImpBtn&&sImpFile){
+      sImpBtn.addEventListener("click",function(){sImpFile.click();});
+      sImpFile.addEventListener("change",function(){if(sImpFile.files&&sImpFile.files[0]){importBackup(sImpFile.files[0]);sImpFile.value="";}});
+    }
+    var sClear=$("#settings-clear-btn");
+    if(sClear)sClear.addEventListener("click",function(){
+      var n=Object.keys(state.entries).length;
+      if(!confirm("Clear all "+n+" logged day(s)? This cannot be undone. Export a backup first if you want to keep them."))return;
+      if(!confirm("Really clear everything? Last chance."))return;
+      state.entries={};editingKey=null;save();
+      loadDayIntoForm(todayKey());renderHeader();
+      alert("All entries cleared. Fresh start ready.");
+    });
+
+    var acctBtn=$("#acct-add-btn"); if(acctBtn){acctBtn.addEventListener("click",addAcct);}
+    var acctInp=$("#acct-add"); if(acctInp){acctInp.addEventListener("keydown",function(ev){if(ev.key==="Enter")addAcct();});}
+
+    $("#prompt-chips").addEventListener("click",function(e){var b=e.target.closest(".prompt-chip");if(!b)return;var j=$("#journal");var pre=j.value&&!/\n\n$/.test(j.value)?(/\n$/.test(j.value)?"\n":"\n\n"):"";j.value+=pre+b.dataset.prompt+"\n";j.focus();j.scrollTop=j.scrollHeight;});
+
+    $$(".tab").forEach(function(t){t.addEventListener("click",function(){$$(".tab").forEach(function(x){x.classList.remove("active");});t.classList.add("active");var v=t.dataset.view;$("#today-view").classList.toggle("hidden",v!=="today");$("#almanac-view").classList.toggle("hidden",v!=="almanac");$("#settings-view").classList.toggle("hidden",v!=="settings");if(v==="almanac")renderAlmanac();if(v==="settings"){renderManageLists();renderNorthStarSettings();}if(v==="today"&&(!editingKey||editingKey===todayKey())){var ed3=$("#entry-date");if(ed3)ed3.value=todayKey();loadDayIntoForm(todayKey());renderHeader();}});});
+
+    $("#save-btn").addEventListener("click",function(){
+      var key=selectedDate();
+      var existing=(state.entries[key]||{}).intentions||[];
+      var data=collectForm();data.intentions=existing;
+      state.entries[key]=data;save();
+      var st=$("#save-status");
+      st.textContent="saved "+fmtDate(key).replace(/,.*/,"")+" \u00b7 "+new Date().toLocaleTimeString(undefined,{hour:"numeric",minute:"2-digit"});
+      renderHeader();editingKey=null;updateEditBanner();
+      setTimeout(function(){st.textContent="";},4000);
+    });
+
+    var ed=$("#entry-date");
+    if(ed){ed.addEventListener("change",function(){
+      loadDayIntoForm(ed.value);
+      renderHeader(ed.value===todayKey()?null:ed.value);
+      editingKey=(ed.value===todayKey()?null:ed.value);updateEditBanner();
+      var note=$("#date-note");
+      if(note){
+        if(ed.value===todayKey())note.textContent="Logging today.";
+        else note.textContent="Logging "+fmtDate(ed.value)+".";
+      }
+    });}
+
+    $("#export-btn").addEventListener("click",exportBackup);
+    var impBtn=$("#import-btn"), impFile=$("#import-file");
+    if(impBtn&&impFile){
+      impBtn.addEventListener("click",function(){impFile.click();});
+      impFile.addEventListener("change",function(){if(impFile.files&&impFile.files[0]){importBackup(impFile.files[0]);impFile.value="";}});
+    }
+
+    $("#begin-btn").addEventListener("click",function(){
+      var v=$("#start-date-input").value;if(!v){$("#start-date-input").focus();return;}
+      state.startDate=v;
+      save();showMain();
+    });
+
+    $("#reset-link").addEventListener("click",function(){
+      $("#main-screen").classList.add("hidden");$("#setup-screen").classList.remove("hidden");
+      $("#start-date-input").value=state.startDate||todayKey();
+      $("#clear-wrap").classList.remove("hidden");
+    });
+
+    var diagBtn=$("#diag-btn");
+    if(diagBtn){diagBtn.addEventListener("click",function(){
+      var out=$("#diag-out");if(!out)return;
+      out.classList.toggle("hidden");
+      if(out.classList.contains("hidden"))return;
+      var lines=[];
+      lines.push("Tool thinks today is: "+todayKey());
+      lines.push("Tool thinks yesterday is: "+yesterdayKeyDiag());
+      lines.push("Your device clock says: "+new Date().toString());
+      lines.push("");
+      var keys=Object.keys(state.entries).sort();
+      lines.push("SAVED DAYS ("+keys.length+"):");
+      if(keys.length===0)lines.push("  (none)");
+      keys.forEach(function(k){
+        var e=state.entries[k];
+        lines.push("  "+k+"  ->  sober: "+(e.sober||"(not set)"));
+      });
+      lines.push("");
+      var c=computeCounters();
+      lines.push("COMPUTED: streak="+c.streak+"  longest="+c.longest+"  month="+c.month+"  total="+c.total);
+      lines.push("Offsets: 2026="+(state.offset2026||0)+"  longestBest="+(state.longestBest||0)+"  month="+(state.monthOffset||0));
+      out.textContent=lines.join("\n");
+    });}
+
+    var clearBtn=$("#clear-all-btn");
+    if(clearBtn){clearBtn.addEventListener("click",function(){
+      var n=Object.keys(state.entries).length;
+      if(!confirm("Clear all "+n+" logged day(s)? This cannot be undone. Export a backup first if you want to keep them."))return;
+      if(!confirm("Really clear everything? Last chance."))return;
+      state.entries={};editingKey=null;save();
+      loadDayIntoForm(todayKey());
+      alert("All entries cleared. Fresh start ready.");
+    });}
+  }
+
+  function showMain(){
+    $("#setup-screen").classList.add("hidden");$("#main-screen").classList.remove("hidden");
+    var ed=$("#entry-date"); if(ed){ed.value=todayKey();var n=$("#date-note");if(n)n.textContent="Logging today.";}
+    renderChips();loadDayIntoForm(todayKey());renderAcct();renderHeader();applyNorthStar();
+  }
+
+  function init(){
+    $("#start-date-input").value=todayKey();
+    wire();seedVerifiedIfNeeded();load();migrateLists();
+    if(state.startDate)showMain();
+    else $("#setup-screen").classList.remove("hidden");
+  }
+  init();
+})();
+</script>
+</body>
+</html>

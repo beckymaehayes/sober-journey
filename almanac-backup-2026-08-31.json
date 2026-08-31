@@ -1,0 +1,3186 @@
+{
+  "_type": "beck_sober_almanac_backup",
+  "_version": 1,
+  "exportedAt": "2026-08-31T18:29:12.131Z",
+  "state": {
+    "startDate": "2026-01-04",
+    "offset2026": 0,
+    "longestBest": 82,
+    "monthOffset": 0,
+    "entries": {
+      "2026-01-04": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "I didn't smoke today and I feel so much better and so much worse all at the same time. The addiction has a strong hold, but you are stronger. Your life is so much more REAL sober. Don't float through your one and only life, Beck.",
+        "savedAt": "2026-08-11T04:46:59.894Z",
+        "intentions": []
+      },
+      "2026-01-05": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "raw",
+          "proud",
+          "frustrated",
+          "annoyed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "I was frustrated but \"forced\" myself to do 16-min yoga with Adrienne and feel so much better. Day 2 sober. Definitely reactive and everything feels annoying, but in general I love being sober and real having fucking control over my brain. Thoughts are thoughts, but my reaction, memory, and emotions are so much steadier. Self respect. I love you babe.",
+        "savedAt": "2026-08-11T04:47:31.260Z",
+        "intentions": []
+      },
+      "2026-01-06": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "proud",
+          "sad",
+          "successful"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "I had a successful day AND felt sad. No binary thinking here. All feelings are valid. So proud of myself. I didn't smoke. Also, I RAN for the first time in over a year. :)",
+        "savedAt": "2026-08-11T04:48:01.426Z",
+        "intentions": []
+      },
+      "2026-01-07": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "proud",
+          "passion",
+          "love"
+        ],
+        "triggers": [],
+        "skills": [
+          "community"
+        ],
+        "journal": "It's 2am but I'm sober and proud. Good reading about passion and loving yourself, doing meaningful work. So aligned. Community!",
+        "savedAt": "2026-08-11T04:48:32.943Z",
+        "intentions": []
+      },
+      "2026-01-19": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "overwhelmed"
+        ],
+        "triggers": [],
+        "skills": [
+          "walked"
+        ],
+        "journal": "Feeling overwhelmed yesterday and today. Took a good walk in the snow. Much better when I don't give in to addiction.",
+        "savedAt": "2026-08-11T04:49:16.408Z",
+        "intentions": []
+      },
+      "2026-02-03": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Really tried to regulate today. It was tough to focus. Meditated and tried to embody success. Went deep and my dog Lucy came in from the other room to check on me.",
+        "savedAt": "2026-08-11T04:52:49.589Z",
+        "intentions": []
+      },
+      "2026-02-11": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "The gift of sobriety helps. I like going to bed with a clear mind. Trying to ignore the ANTs. I am enjoying yoga nidra. It is all good and well and right. Rest easy, beautiful girl.",
+        "savedAt": "2026-08-11T04:56:36.404Z",
+        "intentions": []
+      },
+      "2026-02-18": {
+        "sober": "sober",
+        "current": "2",
+        "urge": "pull",
+        "feelings": [
+          "hopeful",
+          "proud"
+        ],
+        "triggers": [],
+        "skills": [
+          "exercised"
+        ],
+        "journal": "Sobriety is truly a gift. It's hard and I have urges, but I am overall better when I am in control. Surprisingly good thoughts today. Focused on physical health. Went for a run.",
+        "savedAt": "2026-08-11T05:00:10.469Z",
+        "intentions": []
+      },
+      "2026-02-19": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-02-19T12:00:00.000Z",
+        "intentions": []
+      },
+      "2026-02-20": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "proud"
+        ],
+        "triggers": [],
+        "skills": [
+          "called someone",
+          "played games"
+        ],
+        "journal": "I feel so great and so proud for having a quiet, SOBER Friday night. I puzzled and listened to a podcast. I called my cousin Kayla. Keep regulating that nervous system, boo.",
+        "savedAt": "2026-08-11T05:02:14.533Z",
+        "intentions": []
+      },
+      "2026-02-21": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-02-21T12:00:00.000Z",
+        "intentions": []
+      },
+      "2026-02-22": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [
+          "anxious",
+          "panic"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Some days are harder than others. I love you.",
+        "savedAt": "2026-08-11T05:03:27.560Z",
+        "intentions": []
+      },
+      "2026-02-23": {
+        "sober": "sober",
+        "current": null,
+        "urge": "knuckle",
+        "feelings": [
+          "sad"
+        ],
+        "triggers": [
+          "stayed at home"
+        ],
+        "skills": [
+          "yoga nidra",
+          "radical acceptance"
+        ],
+        "journal": "Best sleep score since June of last year. Today started off great, but by the afternoon, I had ANTs and urges. Yoga nidra helped. Talking with AI helped me stay sober. I cried and then read my new book. I feel SO happy/proud to sleep with clarity.",
+        "savedAt": "2026-08-11T05:06:43.541Z",
+        "intentions": []
+      },
+      "2026-02-24": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "community"
+        ],
+        "journal": "It's amazing how different I can feel day to day. Similar productivity, but I felt WAY better today. Great yoga nidra again.",
+        "savedAt": "2026-08-11T05:07:41.124Z",
+        "intentions": []
+      },
+      "2026-02-25": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "called someone",
+          "self-induced hypnosis",
+          "spent time with a friend"
+        ],
+        "journal": "",
+        "savedAt": "2026-08-11T05:09:41.440Z",
+        "intentions": []
+      },
+      "2026-02-26": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "proud"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "radical acceptance",
+          "productive"
+        ],
+        "journal": "What a good day. I relaxed until noon, but did NOT yell at myself. I accepted it as planned.  I was productive at the library and have started paying off my debts. Feeling more secure financially than I have in a long time. Yoga nidra before bed.",
+        "savedAt": "2026-08-11T05:12:28.571Z",
+        "intentions": []
+      },
+      "2026-02-27": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-02-27T12:00:00.000Z",
+        "intentions": []
+      },
+      "2026-02-28": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious",
+          "ashamed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "I didn't smoke, but I had two drinks and now I'm screaming self-hate at myself. I just feel so trapped sometimes like nothing will ever change and I am a failure.",
+        "savedAt": "2026-08-11T05:14:13.996Z",
+        "intentions": []
+      },
+      "2026-03-01": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-01T12:00:00.000Z",
+        "intentions": []
+      },
+      "2026-03-02": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "radical acceptance",
+          "talk therapy"
+        ],
+        "journal": "Helpful session with my therapist Julie as always. I am enough. Weed has been my default mode. My true self is sober Beck. Meditation can help me expand and think differently, just like smoking has in the past. I am enough.",
+        "savedAt": "2026-08-11T05:39:16.922Z",
+        "intentions": []
+      },
+      "2026-03-03": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-03T12:00:00.000Z",
+        "intentions": []
+      },
+      "2026-03-04": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "time in nature",
+          "exercised",
+          "read"
+        ],
+        "journal": "Today was a really tough day mentally. I ran and worked at the library and walked in the woods, but just felt like I was doing it all wrong. Reading Heated Rivalry made me happy. I pulled myself out of a panic attack with yoga nidra earlier. Day 15 babe. It's hard but it is worth it.",
+        "savedAt": "2026-08-11T05:18:30.720Z",
+        "intentions": []
+      },
+      "2026-03-05": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [],
+        "triggers": [
+          "boredom",
+          "routine work"
+        ],
+        "skills": [
+          "yoga nidra",
+          "exercised",
+          "productive"
+        ],
+        "journal": "Much calmer today. Just gotta ride the waves, boo. Ran, read, meditated, did productive work. It's ok that your mind is in a million places and thinks of 10 things at once. Your urges were around rote work today, but instead of smoking, you put on TV and now can peacefully be proud of 16 days! Julie says it takes a year to overcome addiction! One day at a time.",
+        "savedAt": "2026-08-11T05:22:38.434Z",
+        "intentions": []
+      },
+      "2026-03-06": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "tarot readings"
+        ],
+        "journal": "",
+        "savedAt": "2026-08-11T05:23:30.450Z",
+        "intentions": []
+      },
+      "2026-03-07": {
+        "sober": "sober",
+        "current": null,
+        "urge": "none",
+        "feelings": [
+          "proud"
+        ],
+        "triggers": [],
+        "skills": [
+          "walked",
+          "played games",
+          "spent time with family"
+        ],
+        "journal": "No urges on a Saturday! Wow Becks. I am so fucking proud of you. You are figuring this out one day at a time. Ignore the fear and negative thoughts holding you back. Find joy in human interaction.",
+        "savedAt": "2026-08-11T05:25:42.033Z",
+        "intentions": []
+      },
+      "2026-03-08": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "I am so grateful everything works out for. I'm so so so excited for all the doors opening <3",
+        "savedAt": "2026-08-11T05:26:57.049Z",
+        "intentions": []
+      },
+      "2026-03-09": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "productive",
+          "spirituality"
+        ],
+        "journal": "\"The best path is to let go and surrender to God's will\" - Essential Sufism \nHappy day 20. Day 8 of daily self-love yoga nidra practice. You worked all day for a difficult client with much fewer emotions than you would have had in the past. A sign of growth. I am enough. I choose compassion and expanding my heart to all beings.",
+        "savedAt": "2026-08-11T05:29:42.781Z",
+        "intentions": []
+      },
+      "2026-03-10": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "frustrated"
+        ],
+        "triggers": [
+          "boredom",
+          "lack of productivity"
+        ],
+        "skills": [
+          "yoga nidra",
+          "radical acceptance"
+        ],
+        "journal": "Thursdays are tough sometimes. Accept the waves of emotions. Let yourself sit in the boredom and frustration and lack of productivity. Accept the low input days. Reflect on your success. Meditated 4 times today.",
+        "savedAt": "2026-08-11T05:32:29.329Z",
+        "intentions": []
+      },
+      "2026-03-11": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "community",
+          "yoga",
+          "made future plans"
+        ],
+        "journal": "I am invigorated and filled with love today. It's incredible how the tides of emotions are constantly in flux. Sit with negativity without trying to change it. You met a kind man at the library today.",
+        "savedAt": "2026-08-11T05:34:48.378Z",
+        "intentions": []
+      },
+      "2026-03-12": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Last year, I wrote a journal entry titled  \"23 Reasons for 23 days\" to motivate myself to stay sober. I didn't make it then, but I made it 23 days in a row today! Feeling the strength within me.",
+        "savedAt": "2026-08-11T05:39:58.189Z",
+        "intentions": []
+      },
+      "2026-03-13": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-13T12:00:00.000Z",
+        "intentions": []
+      },
+      "2026-03-14": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "let myself rest",
+          "played games"
+        ],
+        "journal": "Struggling today, but also on my period so trying to give myself permission to rest. Stayed sober on game night with the family. <3",
+        "savedAt": "2026-08-11T05:42:19.422Z",
+        "intentions": []
+      },
+      "2026-03-15": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [
+          "late night"
+        ],
+        "skills": [
+          "yoga nidra"
+        ],
+        "journal": "You are on the right path even when the ANTs are strong. I let go of expectations. Sleep helps. Urges come when you are low. Rest.",
+        "savedAt": "2026-08-11T05:45:59.022Z",
+        "intentions": []
+      },
+      "2026-03-16": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "called someone",
+          "tarot readings"
+        ],
+        "journal": "I'm putting all the pieces together. Trust the process. Mourn the death of the old you.",
+        "savedAt": "2026-08-11T05:47:08.621Z",
+        "intentions": []
+      },
+      "2026-03-17": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-17T12:00:00.000Z",
+        "intentions": []
+      },
+      "2026-03-18": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-18T12:00:00.000Z",
+        "intentions": []
+      },
+      "2026-03-19": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [
+          "anxious",
+          "frustrated",
+          "overwhelmed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "30 days. I suppose it's a milestone. I wish I could feel proud. Proud of this. Proud of the work I did today on the business. Stop thinking, start doing. You have all the pieces in place.",
+        "savedAt": "2026-08-11T05:49:12.120Z",
+        "intentions": []
+      },
+      "2026-03-20": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-20T20:00:00"
+      },
+      "2026-03-21": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "called someone",
+          "exercised",
+          "played games"
+        ],
+        "journal": "Focus on what brings joy and ignore the rest. Good call with my friend Emily. Ran 4 miles. Played games with the fam sober from flower and alcohol. Lots of meditation.",
+        "savedAt": "2026-08-11T05:51:07.787Z",
+        "intentions": []
+      },
+      "2026-03-22": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "let myself rest",
+          "exercised",
+          "yoga"
+        ],
+        "journal": "I am so much calmer and less anxious without weed. I feel like I have so much more time back. It does feel \"one note,\" but I know deep down it's better sober. \nMeditated twice. Fasted run for a mile since pre-accident. Yoga.",
+        "savedAt": "2026-08-11T05:53:09.420Z",
+        "intentions": []
+      },
+      "2026-03-23": {
+        "sober": "sober",
+        "current": null,
+        "urge": "knuckle",
+        "feelings": [
+          "anxious"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "tarot readings"
+        ],
+        "journal": "Tough start to the day. Felt anxious. Strong urges. Wanted to run and hide. I meditated and felt better. I did a tarot reading that told me i was fearful but on a journey of transformation. I am taking the steps needed for change. It's not easy, but YOU ARE building a real business for yourself.",
+        "savedAt": "2026-08-11T05:55:33.369Z",
+        "intentions": []
+      },
+      "2026-03-24": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "numb"
+        ],
+        "triggers": [
+          "boredom"
+        ],
+        "skills": [
+          "self-induced hypnosis",
+          "spirituality"
+        ],
+        "journal": "I did some self-induced hypnosis and literally felt energy move behind my neck. It was like something I've never experienced before. Don't try to question or understand it, simply observe it. Still feeling one note and constantly assuming the worst of any situation. What would happen if you assumed the best instead?",
+        "savedAt": "2026-08-11T05:57:53.851Z",
+        "intentions": []
+      },
+      "2026-03-25": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Same ADHD hyper-focus I used to blame on the flower, but now I have a clearer mind to do it. I stayed up until 2:30am revamping my website, but sober this time. I think it's helping me realize I'm too harsh about the weed usage and I'm hoping it will help me find balance if I decide to smoke again. Feeling good and proud.",
+        "savedAt": "2026-08-11T06:00:34.801Z",
+        "intentions": []
+      },
+      "2026-03-26": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-26T20:00:00"
+      },
+      "2026-03-27": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-27T20:00:00"
+      },
+      "2026-03-28": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-28T20:00:00"
+      },
+      "2026-03-29": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-29T20:00:00"
+      },
+      "2026-03-30": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-03-30T20:00:00"
+      },
+      "2026-03-31": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra"
+        ],
+        "journal": "Low dopamine day, but I got some work done and turned it around with an awesome, hour-long yoga nidra session. My therapy challenge for the week: Productivity is not your purpose. For now, let's heal.",
+        "savedAt": "2026-08-11T17:08:00.829Z",
+        "intentions": []
+      },
+      "2026-04-01": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "time in nature",
+          "productive",
+          "read",
+          "spent time with family"
+        ],
+        "journal": "Focus on what brings you passion, what lights a fire in your soul. Worked, walked in nature, dinner with family, 1.5 hour meditation, reading, and laundry. Get out of the head as much as you can. This is life. Are you living it?",
+        "savedAt": "2026-08-11T17:09:49.644Z",
+        "intentions": []
+      },
+      "2026-04-02": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [],
+        "triggers": [
+          "exhaustion",
+          "grief"
+        ],
+        "skills": [
+          "called someone",
+          "talk therapy"
+        ],
+        "journal": "I had strong urges today and I texted my therapist about it. She called me right away and we had a helpful conversation. Spent some time with friends in the evening puzzling and eating tacos.",
+        "savedAt": "2026-08-11T17:11:59.944Z",
+        "intentions": []
+      },
+      "2026-04-03": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "exercised",
+          "productive",
+          "spent time with family"
+        ],
+        "journal": "",
+        "savedAt": "2026-08-11T17:12:44.878Z",
+        "intentions": []
+      },
+      "2026-04-04": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-04-04T20:00:00"
+      },
+      "2026-04-05": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-04-05T20:00:00"
+      },
+      "2026-04-06": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-04-06T20:00:00"
+      },
+      "2026-04-07": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "raw"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "This new version of myself is really something. The raw version of Beck can really get shit done without all the emotional baggage (even if I do feel flat). I'm really proud of myself for doing my taxes today. It's good babe. You are good. Find the self love. That's the ultimate goal.",
+        "savedAt": "2026-08-11T17:15:22.610Z",
+        "intentions": []
+      },
+      "2026-04-08": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "community"
+        ],
+        "journal": "LOVE & COMMUNITY",
+        "savedAt": "2026-08-11T17:16:13.826Z",
+        "intentions": []
+      },
+      "2026-04-09": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-04-09T20:00:00"
+      },
+      "2026-04-10": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-04-10T20:00:00"
+      },
+      "2026-04-11": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-04-11T20:00:00"
+      },
+      "2026-04-12": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-04-12T20:00:00"
+      },
+      "2026-04-13": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "community",
+          "talk therapy"
+        ],
+        "journal": "Reflections from my therapist Julie: Is it fear or is it excitement? I've never truly felt proud of myself and it is disorienting. This sober perspective is engaging, real, and bringing positive energy my way. I may have found a dream roommate and apartment today! I'm so blessed everything works out for me.",
+        "savedAt": "2026-08-11T17:18:58.917Z",
+        "intentions": []
+      },
+      "2026-04-14": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Both your clients asked separately if they could work MORE with you today. Welcome the positive energy and believe you are worth it. So fucking proud of you boo.",
+        "savedAt": "2026-08-11T17:20:20.196Z",
+        "intentions": []
+      },
+      "2026-04-15": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "I am filled with abundance. The Universe is providing because I deserve it. I've worked hard. I'm making my own success. be sure to enjoy it <3",
+        "savedAt": "2026-08-11T17:21:20.878Z",
+        "intentions": []
+      },
+      "2026-04-16": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-04-16T20:00:00"
+      },
+      "2026-04-17": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [
+          "anxious",
+          "raw",
+          "ashamed",
+          "tired",
+          "lonely"
+        ],
+        "triggers": [
+          "exhaustion"
+        ],
+        "skills": [
+          "walked",
+          "time in nature",
+          "spent time with family"
+        ],
+        "journal": "Tired today. Drank for no reason. Trying to be better about that. Overall good day, just struggling a bit. Maybe lonely. Definitely craving with day 60 tomorrow.",
+        "savedAt": "2026-08-11T17:23:16.378Z",
+        "intentions": []
+      },
+      "2026-04-18": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "You did it! 2 months without weed! Wild babe. What an incredible growth journey. You are enough. You are worthy. You are perfect just the way you are. I love you.",
+        "savedAt": "2026-08-11T17:24:23.644Z",
+        "intentions": []
+      },
+      "2026-04-19": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "My friend told me I was glowing today and I have a different aura about me. Feeling good about it.",
+        "savedAt": "2026-08-11T20:56:24.067Z",
+        "intentions": []
+      },
+      "2026-04-20": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "You are making wise mind decisions left and right, even when you don't want to. You are also giving yourself grace and not expecting perfection. Great job! Had my first ever lucid dream this morning! Didn't even think about 420 once.",
+        "savedAt": "2026-08-11T21:01:01.747Z",
+        "intentions": []
+      },
+      "2026-04-21": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [
+          "raw",
+          "tired",
+          "overwhelmed"
+        ],
+        "triggers": [
+          "exhaustion"
+        ],
+        "skills": [
+          "radical acceptance"
+        ],
+        "journal": "You learned today that your strongest urges to smoke come from negotiation fatigue due to task paralysis. Once I decide to do something, even something I love, it becomes a task and my brain views all obligation as a threat (executive dysfunction). Weed used to be my shortcut to task initiation. Now I face the raw ADHD, but I'm learning and navigating it well.",
+        "savedAt": "2026-08-11T21:04:18.929Z",
+        "intentions": []
+      },
+      "2026-04-22": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "talk therapy"
+        ],
+        "journal": "Went to an amazing show tonight. Alcohol gets you out of sorts though. I lose my senses in an unhealthy way. I think it's so easy and desirable, but it's truly not what you want. Helpful therapy session as always.",
+        "savedAt": "2026-08-11T21:08:13.377Z",
+        "intentions": []
+      },
+      "2026-04-23": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Exhausting day. We don't like drinking. It fucks us up the next day.",
+        "savedAt": "2026-08-11T21:09:05.927Z",
+        "intentions": []
+      },
+      "2026-04-24": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "played games",
+          "spent time with a friend"
+        ],
+        "journal": "Game night with friends but had fake beer. Made it a better experience to be sober. Less stress overall.",
+        "savedAt": "2026-08-11T21:09:59.493Z",
+        "intentions": []
+      },
+      "2026-04-25": {
+        "sober": "sober",
+        "current": null,
+        "urge": "knuckle",
+        "feelings": [
+          "overwhelmed",
+          "fearful"
+        ],
+        "triggers": [
+          "stress"
+        ],
+        "skills": [
+          "played games",
+          "productive",
+          "spent time with family"
+        ],
+        "journal": "Today was the closest I've come to smoking, but I didn't and I'm so proud of myself. I would have done it for the wrong reasons. I'm super anxious about my first drag showcase and I wanted to go back to old coping mechanisms. It wouldn't have been worth it. I did some thrifting for Richard (my drag persona) and went to family game night. No urges now. Just pride and clarity.",
+        "savedAt": "2026-08-11T21:13:11.009Z",
+        "intentions": []
+      },
+      "2026-04-26": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-04-26T20:00:00"
+      },
+      "2026-04-27": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "radical acceptance",
+          "talk therapy"
+        ],
+        "journal": "My therapist Julie really helped me today with radical acceptance. I'm so much better without weed, right. now. In this moment in time, it's good for me. I don't have to stress about the future with all-or-nothing thinking today. Today sobriety is good.",
+        "savedAt": "2026-08-11T21:15:17.440Z",
+        "intentions": []
+      },
+      "2026-04-28": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Of course I'm going to bing watch my favorite TV shows when I get anxious. Of course I'm going to fall into my fantasy thoughts and rabbit holes. It's ok Becks. You're doing ok. You worked so hard today. Now rest and get ready for tomorrow.",
+        "savedAt": "2026-08-11T21:16:42.623Z",
+        "intentions": []
+      },
+      "2026-04-29": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "proud"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "I'm so fucking proud of you.",
+        "savedAt": "2026-08-11T21:17:32.706Z",
+        "intentions": []
+      },
+      "2026-04-30": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "proud",
+          "love"
+        ],
+        "triggers": [
+          "grief"
+        ],
+        "skills": [
+          "spent time with family"
+        ],
+        "journal": "I'm so proud of you, boo. Soak it in. Feel the changes. It's amazing. My heart was filled with grief but my language was love today.",
+        "savedAt": "2026-08-11T21:19:10.022Z",
+        "intentions": []
+      },
+      "2026-05-01": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "proud",
+          "love"
+        ],
+        "triggers": [
+          "grief"
+        ],
+        "skills": [
+          "spent time with family"
+        ],
+        "journal": "I'm so proud of you, boo. Soak it in. Feel the changes. It's amazing. My heart was filled with grief but my language was love today.",
+        "savedAt": "2026-08-11T21:19:47.188Z",
+        "intentions": []
+      },
+      "2026-05-02": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "I can't believe tomorrow is really show time! You've worked so hard and should be so proud! Remember to enjoy it. Don't compare. Don't fight with yourself. Don't expect perfection. Have fun and celebrate with your brothers. Be your true authentic self with no apologies.",
+        "savedAt": "2026-08-11T21:21:18.771Z",
+        "intentions": []
+      },
+      "2026-05-03": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "proud",
+          "overwhelmed",
+          "successful"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "YOU DID IT! You're a drag king, baby. I'm so so so proud of you. You fucking kicked ass and took names, Dick Hardenfast. It was scary, hard, emotional, everything. But you did it! You are. awonderful human who brought joy to so many people tonight. I love you!",
+        "savedAt": "2026-08-11T21:22:49.220Z",
+        "intentions": []
+      },
+      "2026-05-04": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "tired",
+          "overwhelmed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Exhaustion and crash today. Gotta sleep.",
+        "savedAt": "2026-08-11T21:23:24.620Z",
+        "intentions": []
+      },
+      "2026-05-05": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [],
+        "triggers": [
+          "travel",
+          "routine work"
+        ],
+        "skills": [
+          "productive"
+        ],
+        "journal": "You had strong urges today, but didn't smoke and it was much easier to pack and get your work done. You're the same person, but it's easier to be sober.",
+        "savedAt": "2026-08-11T21:24:46.502Z",
+        "intentions": []
+      },
+      "2026-05-06": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "alive",
+          "overwhelmed"
+        ],
+        "triggers": [],
+        "skills": [
+          "walked",
+          "community",
+          "made future plans"
+        ],
+        "journal": "Officially moved to Providence! Met the new housemates and I have the BEST vibes from them! This is so wonderful! I am so so grateful. Feeling great, but overwhelmed with work and the move. Almost done!",
+        "savedAt": "2026-08-11T21:26:41.256Z",
+        "intentions": []
+      },
+      "2026-05-07": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Tough and emotional work day. I'm getting there. The clear head helps. You'll figure it out, boo.",
+        "savedAt": "2026-08-11T21:27:47.073Z",
+        "intentions": []
+      },
+      "2026-05-08": {
+        "sober": "sober",
+        "current": null,
+        "urge": "knuckle",
+        "feelings": [
+          "grateful",
+          "overwhelmed"
+        ],
+        "triggers": [
+          "stress",
+          "celebration",
+          "exhaustion"
+        ],
+        "skills": [],
+        "journal": "Day 80! Strongest urges yet today and came very close. Meditated instead. Thinking about 90 days and the 3 month mark. Sobriety is hard, but I feel in control of my life. I like that. Interesting to read my journals from a decade ago and see the similarities. Weed has a powerful hold on my psyche.",
+        "savedAt": "2026-08-11T21:30:26.590Z",
+        "intentions": []
+      },
+      "2026-05-09": {
+        "sober": "sober",
+        "current": null,
+        "urge": "knuckle",
+        "feelings": [
+          "proud",
+          "restless",
+          "overwhelmed"
+        ],
+        "triggers": [
+          "family",
+          "exhaustion",
+          "travel",
+          "social event"
+        ],
+        "skills": [
+          "radical acceptance",
+          "played games"
+        ],
+        "journal": "I'm SO proud of you, Becky. You came minutes away from smoking, but again you made the wise mind decision. It's not about putting Sober Beck on a high horse. That's trauma speaking. It's about being sober tonight, in this moment, not forever. Not always. For now. I got Yahtzee THREE times in one game?! You won tonight in more ways than one. The Universe is on your side <3",
+        "savedAt": "2026-08-11T21:34:03.174Z",
+        "intentions": []
+      },
+      "2026-05-10": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "It's all coming together. Getting better every day.",
+        "savedAt": "2026-08-11T21:34:21.091Z",
+        "intentions": []
+      },
+      "2026-05-11": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [
+          "exhaustion",
+          "major life changes"
+        ],
+        "skills": [],
+        "journal": "Whelp, I made it 82 days in a row. Day 83 had me getting high to unpack my new space. I'm so excited for this next chapter. You got this without weed, boo. Act, don't overthink.",
+        "savedAt": "2026-08-11T21:36:51.875Z",
+        "intentions": []
+      },
+      "2026-05-12": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "tired",
+          "overwhelmed"
+        ],
+        "triggers": [
+          "exhaustion",
+          "illness"
+        ],
+        "skills": [
+          "let myself rest"
+        ],
+        "journal": "Rested a lot today, trying to get over this cold. Ultimately feeling good about the move, just tired.",
+        "savedAt": "2026-08-11T21:38:01.042Z",
+        "intentions": []
+      },
+      "2026-05-13": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "ashamed",
+          "overwhelmed",
+          "annoyed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "It's just so easy to overdo it with the pens. Binging of all sorts. Not great. Don't feel great. Feel more, think less. Give love and compassion to yourself.",
+        "savedAt": "2026-08-11T21:39:26.392Z",
+        "intentions": []
+      },
+      "2026-05-14": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [
+          "numb",
+          "tired",
+          "overwhelmed",
+          "annoyed"
+        ],
+        "triggers": [
+          "exhaustion",
+          "major life changes"
+        ],
+        "skills": [
+          "let myself rest",
+          "exercised"
+        ],
+        "journal": "I was exhausted, out of it, and miserable today. I truly think it's because I smoked last night. Just data to collect. This isn't serving you the way it used to and that's ok. Hoping for more energy tomorrow. I love you, boo.",
+        "savedAt": "2026-08-11T21:41:11.642Z",
+        "intentions": []
+      },
+      "2026-05-15": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Your mood dictates your high. Great day = great evening getting high. Feeling blessed.",
+        "savedAt": "2026-08-11T21:42:15.209Z",
+        "intentions": []
+      },
+      "2026-05-16": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "grateful",
+          "blessed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "I'm feeling really happy and blessed setting up my new space. I am more and more grateful each day.",
+        "savedAt": "2026-08-11T21:43:31.643Z",
+        "intentions": []
+      },
+      "2026-05-17": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "tired",
+          "calm"
+        ],
+        "triggers": [
+          "exhaustion",
+          "major life changes"
+        ],
+        "skills": [
+          "let myself rest"
+        ],
+        "journal": "Slow day of out-of-it-ness from smoking so much yesterday. Calm, but feeling like I'm losing my passion. Rest easy, love.",
+        "savedAt": "2026-08-11T21:44:59.093Z",
+        "intentions": []
+      },
+      "2026-05-18": {
+        "sober": "sober",
+        "current": "2",
+        "urge": null,
+        "feelings": [
+          "hopeful",
+          "blessed",
+          "calm"
+        ],
+        "triggers": [],
+        "skills": [
+          "time in nature",
+          "exercised",
+          "spent time with family"
+        ],
+        "journal": "I am a being of unlimited potential. Feeling so much better after deep rest. What a beautiful day. Feeling so calm and blessed in this new home. Life is amazing.",
+        "savedAt": "2026-08-11T21:46:43.626Z",
+        "intentions": []
+      },
+      "2026-05-19": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious",
+          "restless",
+          "overwhelmed",
+          "annoyed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Weed is my motivator, but I have other tools. I have to use my skills...",
+        "savedAt": "2026-08-11T21:47:47.210Z",
+        "intentions": []
+      },
+      "2026-05-20": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "frustrated",
+          "ashamed",
+          "overwhelmed",
+          "annoyed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Weed is not helping, it's harming. I'm truly surprised with how much I don't want that statement to be true. I drew the Tower in my tarot reading. Like come on, man. Listen to the Universe. Confront the change. Tear down the ego.",
+        "savedAt": "2026-08-11T21:49:53.910Z",
+        "intentions": []
+      },
+      "2026-05-21": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-05-21T20:00:00"
+      },
+      "2026-05-22": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "hopeful",
+          "raw"
+        ],
+        "triggers": [
+          "exhaustion",
+          "late night"
+        ],
+        "skills": [
+          "called someone",
+          "community",
+          "spent time with a friend",
+          "tarot readings"
+        ],
+        "journal": "Ok, Day 1 again for real :/ Made a TikTok for accountability. Slow day feeling faded from last night. Skills included calling a friend, tarot, community connections. These are the things you wouldn't chose to do or be able to do high. You may be hanging upside-down, but you got this boo.",
+        "savedAt": "2026-08-11T22:25:24.332Z",
+        "intentions": []
+      },
+      "2026-05-23": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "community",
+          "spent time with a friend"
+        ],
+        "journal": "Happy birthday broski! Lots of friends and community today.",
+        "savedAt": "2026-08-11T22:41:29.870Z",
+        "intentions": []
+      },
+      "2026-05-24": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "I'm so blessed and manifesting my dream life. This house and moment is amazing. My inner world is the reality. You're scared of sober life because it is unknown. Embrace the mystery.",
+        "savedAt": "2026-08-11T22:42:43.152Z",
+        "intentions": []
+      },
+      "2026-05-25": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "hopeful",
+          "proud",
+          "content",
+          "blessed"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "community",
+          "spent time with a friend",
+          "productive",
+          "giving back"
+        ],
+        "journal": "God I'm so blessed. This new home is incredible. such good vibes all around. I meditated, meal prepped, hiked with Lucy while picking up trash on the trail and ran into someone else doing the exact same thing! Ride the waves. Lean into kindness.",
+        "savedAt": "2026-08-11T22:44:47.531Z",
+        "intentions": []
+      },
+      "2026-05-26": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [
+          "frustrated",
+          "overwhelmed",
+          "sad"
+        ],
+        "triggers": [
+          "bad news"
+        ],
+        "skills": [
+          "radical acceptance",
+          "community",
+          "spent time with a friend"
+        ],
+        "journal": "Rode downtown for work for the first time and my bike was stolen! I locked it and everything. BUT i didn't smoke and that is truly transformation. Even on super hard days, I can persevere. I leaned on community to push through.",
+        "savedAt": "2026-08-11T22:47:07.360Z",
+        "intentions": []
+      },
+      "2026-05-27": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "talk therapy",
+          "tarot readings"
+        ],
+        "journal": "Lead with curiosity, not judgement. At therapy today, Julie told me the opposite of judgement is curiosity.  I drew the Page of Cups in my tarot reading and it was the SAME concept.  \"Approach your emotions with curiosity rather than criticism.\" Thank you Universe. I use because it reduces the judgmental thoughts and increases self love. These aren't bad things and the substance itself is not bad, but the addiction leads to other negative outcomes. Healing is lessening the judgement.",
+        "savedAt": "2026-08-12T00:13:06.497Z",
+        "intentions": []
+      },
+      "2026-05-28": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "let myself rest",
+          "played games",
+          "tarot readings"
+        ],
+        "journal": "Drew the Moon card again (twice this week). Life is mysterious and not everything is meant to be known. Life is not linear. It is cyclical, just like the lunar cycle. No judgment today. I had a wonderful day swiping on TikTok, eating cheesecake, and playing games. No shame. I love you.",
+        "savedAt": "2026-08-12T00:16:05.900Z",
+        "intentions": []
+      },
+      "2026-05-29": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [],
+        "triggers": [
+          "boredom",
+          "stayed at home"
+        ],
+        "skills": [
+          "checked the facts",
+          "treated myself"
+        ],
+        "journal": "The biggest deterrent to not smoking tonight was not wanting to be hungover tomorrow. Because I now have EVIDENCE that will happen. I used to convince myself weed never effected me the next day, but I can tell from this journal that is not true. I checked the facts and can see very clearly I am foggy, groggy, and exhausted the day after I smoke. Mom told me she was proud of me today because she had tried to go sober at 35 and couldn't do it, but she sees all the effort i am putting into it. You had urges today, but had a pint of Ben & Jerry's instead of a J.",
+        "savedAt": "2026-08-12T00:21:44.202Z",
+        "intentions": []
+      },
+      "2026-05-30": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "hopeful",
+          "proud"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Today marks 104 of 150 days in 2026 without weed. Pretty great Beck! You are awakening. It is an incredible journey of perseverance, learning, kindness, and understanding. You are not fighting with two halves of the same coin. You are not forgetting your life. You are dong what needs to be done. I am so so so proud of you.",
+        "savedAt": "2026-08-12T00:25:30.038Z",
+        "intentions": []
+      },
+      "2026-05-31": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-05-31T20:00:00"
+      },
+      "2026-06-01": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-06-01T20:00:00"
+      },
+      "2026-06-02": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-06-02T20:00:00"
+      },
+      "2026-06-03": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "hopeful",
+          "proud",
+          "blessed"
+        ],
+        "triggers": [],
+        "skills": [
+          "community",
+          "productive",
+          "spirituality"
+        ],
+        "journal": "I am blessed beyond words. Two weeks in and NO cravings or urges this week! I feel like a changed woman. Productive and working hard. Staying connected with loved ones. Limiting the judgmental thoughts. Staying spiritual and curious. Living life authentically. And the Universe is giving back! Going to become a yoga nidra teacher :)",
+        "savedAt": "2026-08-12T00:28:12.706Z",
+        "intentions": []
+      },
+      "2026-06-04": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "treated myself"
+        ],
+        "journal": "Got a massage today. Finding clarity. Love no cravings <3",
+        "savedAt": "2026-08-12T00:29:31.574Z",
+        "intentions": []
+      },
+      "2026-06-05": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "peaceful",
+          "lonely",
+          "calm"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "time in nature",
+          "called someone",
+          "giving back"
+        ],
+        "journal": "I'm really shocked with how low my cravings are and how calm I am in general. A bit lonely though. That will be the next step in this journey. Lucy and I went paddle boarding today. Stunning Rhode Island state park.",
+        "savedAt": "2026-08-12T00:31:44.659Z",
+        "intentions": []
+      },
+      "2026-06-06": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "fiery",
+          "passion"
+        ],
+        "triggers": [
+          "social event"
+        ],
+        "skills": [
+          "treated myself"
+        ],
+        "journal": "I am always more vulnerable when I drink. I was with my stoner friends and we had just gone to a speakeasy before heading to a musical concert. I convinced myself it would make the show better if I took a hit of my friend's pen. I felt overall it enhanced the experience. Can I find balance?",
+        "savedAt": "2026-08-12T00:35:26.194Z",
+        "intentions": []
+      },
+      "2026-06-07": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "raw",
+          "content",
+          "exhausted"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Lots of social events and movement today. Crashed at my friend's house the night before. Went to a birthday party. Went to a drag show and smoked my pen in the evening.",
+        "savedAt": "2026-08-12T00:37:18.429Z",
+        "intentions": []
+      },
+      "2026-06-08": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "content",
+          "exhausted"
+        ],
+        "triggers": [
+          "exhaustion"
+        ],
+        "skills": [
+          "walked",
+          "time in nature",
+          "called someone",
+          "read",
+          "spirituality"
+        ],
+        "journal": "Really tired after a busy weekend. I read a lot, walked my dog in the woods, called mom, meal prepped, and cleaned my room. Feeling good and leaning into that positive energy. I love you Beck!",
+        "savedAt": "2026-08-12T00:39:38.113Z",
+        "intentions": []
+      },
+      "2026-06-09": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "grateful",
+          "curious",
+          "blessed"
+        ],
+        "triggers": [
+          "alcohol"
+        ],
+        "skills": [
+          "spent time with a friend",
+          "talk therapy",
+          "novelty"
+        ],
+        "journal": "So grateful to my therapist Julie for the guidance on my journey. I also love doing novel and new things. Tonight it was a Puzzles & Pints event downtown with new friends. I got booked for a drag story hour today <3",
+        "savedAt": "2026-08-12T00:42:24.782Z",
+        "intentions": []
+      },
+      "2026-06-10": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "grateful",
+          "blessed"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "time in nature",
+          "spent time with family"
+        ],
+        "journal": "So blessed. So grateful. So loved. Beautiful say re-potting plants with mom and grabbing dinner. Happy for her harm reduction journey too.",
+        "savedAt": "2026-08-12T00:43:44.049Z",
+        "intentions": []
+      },
+      "2026-06-11": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious",
+          "proud",
+          "frustrated",
+          "grateful"
+        ],
+        "triggers": [],
+        "skills": [
+          "checked the facts"
+        ],
+        "journal": "Proud of you for being honest with yourself today. Your client is also a great mentor and so supportive of you. You felt so frustrated, but she validated you and your work. The Universe agrees. Find ways to increase self trust.",
+        "savedAt": "2026-08-12T00:46:35.774Z",
+        "intentions": []
+      },
+      "2026-06-12": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious",
+          "tired",
+          "content"
+        ],
+        "triggers": [
+          "stress",
+          "social event",
+          "routine work"
+        ],
+        "skills": [
+          "walked",
+          "time in nature",
+          "productive"
+        ],
+        "journal": "Busy productive day. Work, yoga nidra, reading, tarot, walked Lucy in the woods. I decided to smoke what ended up being the CBD weed I bought a while back to limit myself from getting high. But i also brought my pen and took two hits. then I got lost in the woods with my dog for 4 miles. It helped with the rote work of prepping for tomorrow's house warming party we are hosting.",
+        "savedAt": "2026-08-12T00:50:32.590Z",
+        "intentions": []
+      },
+      "2026-06-13": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "proud",
+          "grateful",
+          "content",
+          "exhausted"
+        ],
+        "triggers": [
+          "celebration"
+        ],
+        "skills": [
+          "spent time with a friend",
+          "spent time with family"
+        ],
+        "journal": "I'm so fucking happy right now. New housemates. New home. A party with friends and family to celebrate. So grateful for this experience I created for myself. I smoked at the party with friends and my brother said that life is long and he wants to be high for some of it. I get that and agreed in the moment. Today is another day I think it added to my experience, but there is always that shadow of anxiety it brings. It also makes me more forgetful which leads to an increase in judgmental thoughts. Are the pros worth the cons?",
+        "savedAt": "2026-08-12T00:54:58.424Z",
+        "intentions": []
+      },
+      "2026-06-14": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "numb",
+          "ashamed",
+          "exhausted"
+        ],
+        "triggers": [
+          "exhaustion"
+        ],
+        "skills": [
+          "let myself rest"
+        ],
+        "journal": "Pretty exhausted today. Smoking into oblivion. Will it help me release? Short term relief is not healing...",
+        "savedAt": "2026-08-12T00:57:48.074Z",
+        "intentions": []
+      },
+      "2026-06-15": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "peaceful",
+          "tired"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "time in nature",
+          "called someone",
+          "read",
+          "spirituality"
+        ],
+        "journal": "Peaceful day. Deep into thoughts about consciousness. Going to do an astral projection meditation now before bed.",
+        "savedAt": "2026-08-12T00:59:29.491Z",
+        "intentions": []
+      },
+      "2026-06-16": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "restless",
+          "frustrated",
+          "ashamed",
+          "overwhelmed",
+          "depressed",
+          "exhausted"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "I don't like the binging and fuck it attitude when smoking. I feel out of control, even though I'm really not. Stop judging. Life is life. Keep moving forward.",
+        "savedAt": "2026-08-12T01:01:08.892Z",
+        "intentions": []
+      },
+      "2026-06-17": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "ashamed",
+          "overwhelmed",
+          "annoyed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Smoking again! Eek, it's so powerful! Take the lessons from this year. Build your own happiness, not this pseudo-happiness. You're following patterns of behavior that can be unlearned. I love you.",
+        "savedAt": "2026-08-12T01:20:32.685Z",
+        "intentions": []
+      },
+      "2026-06-18": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious",
+          "ashamed",
+          "annoyed",
+          "exhausted"
+        ],
+        "triggers": [
+          "exhaustion"
+        ],
+        "skills": [],
+        "journal": "I'm writing this while awake at 4:20 in the morning because I smoked all night. Not good choices really.",
+        "savedAt": "2026-08-12T01:21:48.118Z",
+        "intentions": []
+      },
+      "2026-06-19": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "numb",
+          "content",
+          "overwhelmed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "It's all in the mind. You are in control. We love ourselves even during breaks. Emotional states are all so cyclical. What makes me feel good LONG TERM?",
+        "savedAt": "2026-08-12T01:24:09.135Z",
+        "intentions": []
+      },
+      "2026-06-20": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "exhausted"
+        ],
+        "triggers": [
+          "exhaustion",
+          "physical pain"
+        ],
+        "skills": [],
+        "journal": "Happy Pride! Busy day with friends going to the beach and Providence parade. What fun! I meditated and didn't smoke until the end of the day. It was not needed, but I got sun burnt so my vulnerability factors included exhaustion and physical pain. I reflected on why I didn't need it.",
+        "savedAt": "2026-08-12T01:29:32.772Z",
+        "intentions": []
+      },
+      "2026-06-21": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "exhausted"
+        ],
+        "triggers": [
+          "exhaustion",
+          "physical pain"
+        ],
+        "skills": [],
+        "journal": "Smoked the pen. Sun burnt and sleepy.",
+        "savedAt": "2026-08-12T01:31:13.539Z",
+        "intentions": []
+      },
+      "2026-06-22": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "overwhelmed",
+          "fearful",
+          "exhausted"
+        ],
+        "triggers": [
+          "stress",
+          "exhaustion",
+          "physical pain"
+        ],
+        "skills": [],
+        "journal": "Overwhelmed and over-smoking.",
+        "savedAt": "2026-08-12T01:32:30.556Z",
+        "intentions": []
+      },
+      "2026-06-23": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "numb",
+          "tired"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Smoked today but felt like it helped. It's all about the mindset. Three yoga nidra sessions today. Wouldn't it be better sober though?",
+        "savedAt": "2026-08-12T01:33:46.557Z",
+        "intentions": []
+      },
+      "2026-06-24": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "ashamed",
+          "overwhelmed",
+          "fearful"
+        ],
+        "triggers": [
+          "exhaustion",
+          "social event"
+        ],
+        "skills": [],
+        "journal": "It was harmful today. Went on my first date in literal years today. I did not feel very confident at all. Smoked afterward and it increased my ANTs and negativity tenfold. Helped me reflect on the confidence thing though.",
+        "savedAt": "2026-08-12T01:36:22.675Z",
+        "intentions": []
+      },
+      "2026-06-25": {
+        "sober": "sober",
+        "current": null,
+        "urge": "knuckle",
+        "feelings": [],
+        "triggers": [
+          "stress",
+          "recent usage"
+        ],
+        "skills": [
+          "radical acceptance",
+          "checked the facts"
+        ],
+        "journal": "I REALLY wanted to smoke and literally had a J in my mouth. So proud of you for giving yourself the gift of sobriety tonight. It truly is a gift. You are strong, blessed, determined, and good. It's all good. I love you.",
+        "savedAt": "2026-08-12T01:39:09.809Z",
+        "intentions": []
+      },
+      "2026-06-26": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "proud",
+          "tired",
+          "content"
+        ],
+        "triggers": [],
+        "skills": [
+          "called someone",
+          "community",
+          "spent time with a friend",
+          "productive"
+        ],
+        "journal": "Almost smoked again but proud of myself for not. Tried contra dancing with friends for the first time ever. Had a long phone call with the bestie. New social activities and staying connected with friends are super helpful skills.",
+        "savedAt": "2026-08-12T01:41:08.543Z",
+        "intentions": []
+      },
+      "2026-06-27": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [
+          "ANTs"
+        ],
+        "skills": [],
+        "journal": "The pen is dangerous. It has to be the next to go. I convince myself that I can go deeper in my meditations with weed, but I am not so sure that's true.",
+        "savedAt": "2026-08-12T01:43:00.194Z",
+        "intentions": []
+      },
+      "2026-06-28": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "content"
+        ],
+        "triggers": [
+          "celebration"
+        ],
+        "skills": [],
+        "journal": "Felt amazing today. Went for a run, meal prepped, yoga nidra, and smoked before my big brother's drag show. Positive day and mindset. Does the weed enhance the experience?",
+        "savedAt": "2026-08-12T01:44:54.378Z",
+        "intentions": []
+      },
+      "2026-06-29": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious",
+          "hopeful",
+          "tired"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "productive"
+        ],
+        "journal": "Anxious but excited for tomorrow.",
+        "savedAt": "2026-08-12T01:45:45.979Z",
+        "intentions": []
+      },
+      "2026-06-30": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious",
+          "raw",
+          "blessed"
+        ],
+        "triggers": [],
+        "skills": [
+          "community"
+        ],
+        "journal": "Anxious but used my skills for most of the day. Open up your fearful heart my love. Lean in to all the kind, generous souls who support you and your endeavors. Multiple new friends came to drag story hour. Your housemate made you dinner. People love and care for you, but you have to believe they do!",
+        "savedAt": "2026-08-12T01:48:17.513Z",
+        "intentions": []
+      },
+      "2026-07-01": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious",
+          "brave"
+        ],
+        "triggers": [],
+        "skills": [
+          "spent time with a friend",
+          "productive"
+        ],
+        "journal": "Slow start to the day and bit anxious. Very hot outside. Went on another date. I'm proud of myself for getting out there and trying.",
+        "savedAt": "2026-08-12T01:49:39.213Z",
+        "intentions": []
+      },
+      "2026-07-02": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "ashamed",
+          "annoyed"
+        ],
+        "triggers": [
+          "routine work",
+          "repetitive behavior"
+        ],
+        "skills": [],
+        "journal": "No cravings, but still decided to smoke at 11pm to drive to mom's house. It's these bad habitual behaviors that get me, like thinking I need to get high to drive an hour.",
+        "savedAt": "2026-08-12T01:52:03.737Z",
+        "intentions": []
+      },
+      "2026-07-03": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-07-03T20:00:00"
+      },
+      "2026-07-04": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [
+          "family",
+          "celebration",
+          "social event"
+        ],
+        "skills": [],
+        "journal": "Happy 4th! I am so blessed. More family events and friends in the evening. Smoking to celebrate quite a bit this summer.",
+        "savedAt": "2026-08-12T01:55:01.686Z",
+        "intentions": []
+      },
+      "2026-07-05": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "numb",
+          "annoyed",
+          "exhausted"
+        ],
+        "triggers": [
+          "exhaustion"
+        ],
+        "skills": [],
+        "journal": "Day of rest. Too much junk food. Smoking overall harmful. No judgement but important to recognize how easy it is to smoke when I am vulnerable and tired. It doesn't make me happy like when I'm celebrating with others.",
+        "savedAt": "2026-08-12T01:57:00.469Z",
+        "intentions": []
+      },
+      "2026-07-06": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Harmful not helpful.",
+        "savedAt": "2026-08-12T01:57:18.169Z",
+        "intentions": []
+      },
+      "2026-07-07": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-07-07T20:00:00"
+      },
+      "2026-07-08": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-07-08T20:00:00"
+      },
+      "2026-07-09": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "grateful"
+        ],
+        "triggers": [
+          "celebration",
+          "camping"
+        ],
+        "skills": [],
+        "journal": "Camping trip I've been looking forward to all summer. This was the back-of-mind reason I was telling myself it's been ok to smoke this summer. I knew I would want to smoke on this trip. A lot of joy, fun, and excitement with friends.",
+        "savedAt": "2026-08-12T01:59:20.519Z",
+        "intentions": []
+      },
+      "2026-07-10": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-07-10T20:00:00"
+      },
+      "2026-07-11": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "A lot of fun, but smoked and drank the whole day. It made time go by way too fast.",
+        "savedAt": "2026-08-12T02:00:13.919Z",
+        "intentions": []
+      },
+      "2026-07-12": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Wonderful trip overall, but weed robs me of time! I feel like everything floated by in a daze and I don't even know what happened to my weekend.",
+        "savedAt": "2026-08-12T02:01:12.002Z",
+        "intentions": []
+      },
+      "2026-07-13": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Getting closer to figuring it out.",
+        "savedAt": "2026-08-12T02:01:37.835Z",
+        "intentions": []
+      },
+      "2026-07-14": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "proud"
+        ],
+        "triggers": [],
+        "skills": [
+          "walked",
+          "time in nature",
+          "called someone",
+          "community",
+          "spent time with a friend",
+          "productive",
+          "read"
+        ],
+        "journal": "Feeling good and proud of myself.",
+        "savedAt": "2026-08-12T02:02:34.952Z",
+        "intentions": []
+      },
+      "2026-07-15": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "When you're high, it's still you. The high is just chemicals rattling around in your brain making you experience and perceive the world differently.",
+        "savedAt": "2026-08-12T02:04:14.702Z",
+        "intentions": []
+      },
+      "2026-07-16": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "It's hard to stay mindful and have focused thoughts when you're dopamine depleted, especially the day after smoking. This is the kind of data you need to collect and write down, non-judgmentally. Conversations with Stoner Beck. Real talk. You are so much more capable sober.",
+        "savedAt": "2026-08-12T02:07:51.301Z",
+        "intentions": []
+      },
+      "2026-07-17": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-07-17T20:00:00"
+      },
+      "2026-07-18": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-07-18T20:00:00"
+      },
+      "2026-07-19": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [
+          "social event",
+          "repetitive behavior"
+        ],
+        "skills": [],
+        "journal": "Weed steals something very important from you: TIME. Had a fun day with friends, but it's now 2:40 am and you are going to bed yelling at yourself \"I'm so overwhelmed!\" This is harmful babe.",
+        "savedAt": "2026-08-12T02:09:34.668Z",
+        "intentions": []
+      },
+      "2026-07-20": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "What would a year consistently sober look like? Could you commit to something like that?",
+        "savedAt": "2026-08-12T02:10:22.184Z",
+        "intentions": []
+      },
+      "2026-07-21": {
+        "sober": "sober",
+        "current": "3",
+        "urge": "whisper",
+        "feelings": [
+          "hopeful",
+          "proud",
+          "grateful",
+          "overwhelmed"
+        ],
+        "triggers": [
+          "boredom",
+          "celebration"
+        ],
+        "skills": [
+          "walked",
+          "called someone"
+        ],
+        "journal": "I didn't smoke silly cannabis.\nWhat am I grateful I did today?\ni am grateful i practiced yoga nidra with my housemate :)\n\nI am grateful I am on this sober journey. Thanks Julie!",
+        "savedAt": "2026-08-12T02:11:24.051Z",
+        "intentions": []
+      },
+      "2026-07-22": {
+        "sober": "sober",
+        "current": "3",
+        "urge": "none",
+        "feelings": [
+          "raw"
+        ],
+        "triggers": [
+          "late night"
+        ],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "called someone",
+          "breathwork",
+          "talk therapy"
+        ],
+        "journal": "Even sad and emotional, I feel SO much better sober. The clarity is unreal. Don't let the addiction trick you babe. Weed was a helpful survival tool, but you're here to thrive, not just survive. Thanks, Julie.",
+        "savedAt": "2026-08-12T02:12:45.301Z",
+        "intentions": []
+      },
+      "2026-07-23": {
+        "sober": "sober",
+        "current": "4",
+        "urge": "whisper",
+        "feelings": [],
+        "triggers": [
+          "perfectionism"
+        ],
+        "skills": [
+          "yoga nidra",
+          "walked"
+        ],
+        "journal": "",
+        "savedAt": "2026-08-10T01:51:53.195Z",
+        "intentions": []
+      },
+      "2026-07-24": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "frustrated"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "time in nature",
+          "breathwork",
+          "Mindfulness of current thoughts"
+        ],
+        "journal": "Overall frustrated today, but really proud of myself for letting the thoughts float by. I've learned so much.",
+        "savedAt": "2026-08-12T02:15:33.434Z",
+        "intentions": []
+      },
+      "2026-07-25": {
+        "sober": "sober",
+        "current": null,
+        "urge": "pull",
+        "feelings": [
+          "tired",
+          "lonely",
+          "depressed"
+        ],
+        "triggers": [
+          "loneliness",
+          "stayed at home",
+          "grief"
+        ],
+        "skills": [],
+        "journal": "Didn't use my skills today and self isolated. Cried while paddle boarding. Felt really lonely. Avoided plans I made with friends and stayed in sulking.",
+        "savedAt": "2026-08-12T02:16:54.733Z",
+        "intentions": []
+      },
+      "2026-07-26": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "peaceful",
+          "content"
+        ],
+        "triggers": [],
+        "skills": [
+          "walked",
+          "time in nature",
+          "made art",
+          "spent time with a friend",
+          "productive"
+        ],
+        "journal": "It's really helpful when I'm engaged with others socially.",
+        "savedAt": "2026-08-12T02:17:59.266Z",
+        "intentions": []
+      },
+      "2026-07-27": {
+        "sober": "sober",
+        "current": "4",
+        "urge": "none",
+        "feelings": [
+          "raw",
+          "proud",
+          "tender"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "time in nature",
+          "called someone",
+          "community",
+          "spent time with a friend"
+        ],
+        "journal": "One thing I did today that survival-me would have smoked through or avoided:\nmeal prepping with my housemate. going to a social event.\n\nFeeling blessed. I'm financially stable for the first time in my life and my body doesn't know how to handle it. It keeps trying to feel stressed even though I have nothing to worry about.",
+        "savedAt": "2026-08-12T02:19:31.850Z",
+        "intentions": []
+      },
+      "2026-07-28": {
+        "sober": "sober",
+        "current": "5",
+        "urge": "pull",
+        "feelings": [
+          "grounded",
+          "anxious",
+          "hopeful",
+          "clear",
+          "content",
+          "overwhelmed"
+        ],
+        "triggers": [
+          "stress",
+          "lack of productivity"
+        ],
+        "skills": [
+          "yoga nidra",
+          "called someone",
+          "exercised",
+          "productive",
+          "tarot readings",
+          "loving-kindness"
+        ],
+        "journal": "What did the hard part feel like in my body, and what happened when I stayed with it?\nanxiety, racing heart, self-hate, fear. I wanted to run and hide and ignore all my problems. i wanted to cuddle up in bed and dissassociate with TV\nWhat am I grateful I did today?\ni went to the library with my roomate. I did real work for my clients. I caught up admin to-dos. I read my tarot and practiced loving kindness. I ate three full meals. I ran in the morning and walked 6 miles in the evening. i spoke with my bestie on the phone and connected. Fuck yes, Beck.",
+        "savedAt": "2026-08-12T02:21:33.433Z",
+        "intentions": []
+      },
+      "2026-07-29": {
+        "sober": "sober",
+        "current": "4",
+        "urge": "knuckle",
+        "feelings": [
+          "joyful",
+          "grateful",
+          "alive",
+          "tired"
+        ],
+        "triggers": [
+          "boredom",
+          "stress",
+          "late night"
+        ],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "spent time with a friend"
+        ],
+        "journal": "What am I grateful I did today?\nspent time with the roommates and played games\ncleaned my room thanks to my housemate's encouragement\nshowered\n\nI am so blessed with this beautiful home and the humans that inhabit it.",
+        "savedAt": "2026-08-12T02:22:36.218Z",
+        "intentions": []
+      },
+      "2026-07-30": {
+        "sober": "sober",
+        "current": "3",
+        "urge": "none",
+        "feelings": [
+          "grounded",
+          "joyful",
+          "grateful",
+          "content"
+        ],
+        "triggers": [],
+        "skills": [
+          "walked",
+          "time in nature",
+          "let myself rest",
+          "exercised"
+        ],
+        "journal": "Something I love or respect about myself right now:\ni am actively changing the brain chemistry. i am doing hard things. I am acknowledging the good coming to me. i am changing the thought patterns. I am being super active. i being social. i am giving myself grace. i am putting myself out there. i am being productive. proud of you boo <3",
+        "savedAt": "2026-08-12T02:23:24.771Z",
+        "intentions": []
+      },
+      "2026-07-31": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "grounded",
+          "grateful"
+        ],
+        "triggers": [],
+        "skills": [
+          "community",
+          "spent time with a friend",
+          "novelty",
+          "learned something new"
+        ],
+        "journal": "7 mile walk with the dog. Sobriety helps a lot with staying grounded.",
+        "savedAt": "2026-08-12T02:25:14.438Z",
+        "intentions": []
+      },
+      "2026-08-01": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "time in nature",
+          "let myself rest",
+          "spirituality"
+        ],
+        "journal": "100 minute yoga nidra session, the longest yet!",
+        "savedAt": "2026-08-12T02:26:08.838Z",
+        "intentions": []
+      },
+      "2026-08-02": {
+        "sober": "sober",
+        "current": "3",
+        "urge": "none",
+        "feelings": [
+          "grounded",
+          "hopeful",
+          "proud",
+          "grateful",
+          "content"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "time in nature",
+          "breathwork",
+          "spent time with a friend",
+          "productive",
+          "read",
+          "spirituality"
+        ],
+        "journal": "So grateful, so blessed.",
+        "savedAt": "2026-08-12T02:27:05.004Z",
+        "intentions": []
+      },
+      "2026-08-03": {
+        "sober": "sober",
+        "current": "2",
+        "urge": "none",
+        "feelings": [
+          "hopeful",
+          "raw",
+          "grateful"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "let myself rest",
+          "talk therapy",
+          "spirituality"
+        ],
+        "journal": "Buck up, kid! Connected with my dad during a reiki session with my therapist Julie. I literally asked for a sign from him on my walk the other day while listening to a podcast about how spirits send signs. Then Julie gets the feeling of a formidable presence behind her while we are doing reiki and shares his desire for me to continue this sobriety journey. Buck up and get it done. Thanks daddy. Thanks Julie.",
+        "savedAt": "2026-08-12T02:29:34.554Z",
+        "intentions": []
+      },
+      "2026-08-06": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "joyful",
+          "peaceful",
+          "grateful"
+        ],
+        "triggers": [],
+        "skills": [
+          "community",
+          "spent time with a friend"
+        ],
+        "journal": "",
+        "savedAt": "2026-08-12T02:32:42.771Z",
+        "intentions": []
+      },
+      "2026-08-05": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "anxious",
+          "raw",
+          "depressed"
+        ],
+        "triggers": [
+          "stress",
+          "ANTs"
+        ],
+        "skills": [
+          "yoga nidra",
+          "productive"
+        ],
+        "journal": "I cried on my run this morning. Raw emotions and feeling anxious.",
+        "savedAt": "2026-08-12T02:32:14.521Z",
+        "intentions": []
+      },
+      "2026-08-04": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious",
+          "overwhelmed",
+          "depressed"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "I did not take care of myself today.",
+        "savedAt": "2026-08-12T02:30:32.221Z",
+        "intentions": []
+      },
+      "2026-08-07": {
+        "sober": "sober",
+        "current": "3",
+        "urge": "none",
+        "feelings": [
+          "hopeful",
+          "proud"
+        ],
+        "triggers": [
+          "celebration"
+        ],
+        "skills": [
+          "community",
+          "spent time with a friend"
+        ],
+        "journal": "I'm so proud of myself for avoiding drinking too. I went to a party where I normally 100% would have drank. I acknowledged how it wasn't very different beign sober. I was much more engaged, no anxiety, I remembered people's names and what we discussed. The clarity is unmatched. It was still fun listening to throwbacks and singing along with everyone. Very much a party atmosphere, but no anxiety or hyperfocus or buzzed confusion. I didn't change my mental state, but I didn't need to. I am really really really proud of your growth boo. It is incredible. You are a healthier, happier Beck . You are not boring or flat no matter what your addict mind tries to tell you. You are MORE engaged, MORE interested, and MORE interesting. It is a more intricate and meaningful life sober.",
+        "savedAt": "2026-08-12T02:34:25.721Z",
+        "intentions": []
+      },
+      "2026-08-08": {
+        "sober": "used",
+        "current": "2",
+        "urge": "pull",
+        "feelings": [
+          "proud",
+          "alive",
+          "curious",
+          "content"
+        ],
+        "triggers": [
+          "family",
+          "boredom",
+          "social event"
+        ],
+        "skills": [],
+        "journal": "I broke an 18 day streak, but I was happy and made the choice consciously. Went to a family party on the lake and my cousin came. She said her husband rolled a J for us, so we went out on the lake and smoked with another cousin. It was fun and exciting. I was in a good headspace with family. \n\nI was bored beforehand. I legitimately felt bored and blah. I was judging myself and the party. When I am sober and others are not, I judge, judge, judge the situation and the people. It is automatic, but the thoughts stick to me instead of passing by. But also it was one of the VERY FEW times (maybe the first time ever?!) that I was not drinking at a family party. That was also part of the reason I smoked. \n\nOn the drive over beforehand, I was surprised with how little urges I had. I had more urges to \"Drink Poison\" as I've been saying about alcohol than I did about smoking. But the opportunity presented itself and I took it. AND I DIDN'T DRINK! :) I am very proud of myself for that clarity at least. I didn't kill any neurons or attack my body with ethanol, which is excellent. \n\nOverall the experience was helpful, not harmful. I stayed engaged at the party and shared plenty of love with my beautiful family. I took Lucy in the woods when I got home and I journaled and pulled tarot (the Knight of Wands when last night I pulled the Devil). The Devil is not marijuana. The Devil is the strings pulling me to judge and expect perfection and feed constant Automatic Negative Thoughts without relenting. It's the self-hate and constant stream of thoughts that tell me I am not good enough and making mistakes and it was wrong to say that or I was bad for doing this. The weed slows those thoughts and helps me recognize them. It doesn't work for long term use, but it helps when the noise is loud and helps me compare the two worlds I can live in. This world (the world I want to be in) exists through meditation, movement, nature, companionship, thoughtfulness, learning, understanding, patience, kindness, compassion, and love. Find the radical acceptance for simply existing. I love you so fucking much babe.",
+        "savedAt": "2026-08-12T02:37:44.521Z",
+        "intentions": []
+      },
+      "2026-08-09": {
+        "sober": "sober",
+        "current": "2",
+        "urge": "whisper",
+        "feelings": [
+          "raw",
+          "tired",
+          "curious"
+        ],
+        "triggers": [
+          "exhaustion"
+        ],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "breathwork",
+          "went to bed early"
+        ],
+        "journal": "What am I grateful I did today?\nwent on a date. did not smoke. prepped my overnight oats.\n\nslow, out of it day after smoking so much yesterday. I really don't like how I feel so foggy the day after. I'm exhausted and blah, but otherwise proud of myself for all the learning and knowledge I am gaining on this journey. I am so close to truly believing sobriety is my future",
+        "savedAt": "2026-08-10T01:51:26.128Z",
+        "intentions": []
+      },
+      "2026-01-18": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "I forgive you, Beck",
+        "savedAt": "2026-08-11T04:48:56.243Z",
+        "intentions": []
+      },
+      "2026-01-27": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "When you have an urge, ask, \"what emotion am I avoiding?\" \n\nMy therapist Julie helps me so much. Re-set, re-think, re-frame.",
+        "savedAt": "2026-08-11T05:37:23.357Z",
+        "intentions": []
+      },
+      "2026-01-29": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "I know it's hard but we can't avoid the grief. Feel the sadness. Feel the hurt and boredom and frustration. They are all inputs telling you something about your life. Listen to your body. Consistency is key.",
+        "savedAt": "2026-08-11T04:50:31.492Z",
+        "intentions": []
+      },
+      "2026-02-01": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "I'm in a very negative headspace still and I cannot self-deprecate so much in front of others.",
+        "savedAt": "2026-08-11T04:51:33.624Z",
+        "intentions": []
+      },
+      "2026-02-06": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "anxious"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Anxiety is a bitch",
+        "savedAt": "2026-08-11T04:53:49.406Z",
+        "intentions": []
+      },
+      "2026-02-10": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Practice your skills. You are already here.",
+        "savedAt": "2026-08-11T04:55:23.837Z",
+        "intentions": []
+      },
+      "2026-02-12": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "Focus on routine. Slow down",
+        "savedAt": "2026-08-11T04:56:58.270Z",
+        "intentions": []
+      },
+      "2026-02-15": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "depressed",
+          "emotional"
+        ],
+        "triggers": [],
+        "skills": [],
+        "journal": "Not writing, smoking, hiding. PMS is bad. It gets me out of myself depressed.",
+        "savedAt": "2026-08-11T04:58:01.520Z",
+        "intentions": []
+      },
+      "2026-08-10": {
+        "sober": "sober",
+        "current": "2",
+        "urge": null,
+        "feelings": [
+          "restless",
+          "ashamed"
+        ],
+        "triggers": [],
+        "skills": [
+          "time in nature",
+          "community",
+          "spent time with a friend"
+        ],
+        "journal": "Tough Monday blues. But overall content with this journey I am on and the effort I am putting into sharing my story with others. I hope it helps folks.",
+        "savedAt": "2026-08-11T06:05:59.667Z",
+        "intentions": []
+      },
+      "2026-08-11": {
+        "sober": "sober",
+        "current": "2",
+        "urge": null,
+        "feelings": [
+          "hopeful",
+          "proud",
+          "content",
+          "blessed",
+          "calm"
+        ],
+        "triggers": [],
+        "skills": [
+          "walked",
+          "time in nature",
+          "radical acceptance",
+          "breathwork",
+          "let myself rest",
+          "exercised",
+          "journaling"
+        ],
+        "journal": "Super reflective day journaling. I've come so so far and am super excited about this journey I am on. I am actively healing my nervous system and past traumas. I never would've imagined I could limit my smoking so much. I've been smoking almost daily for the past 15 years, but not in 2026. This year so far, I can celebrate 141 days sober. Unreal. You are using your skills and expanding the toolbox every day. Keep learning and growing. The Universe, your people, and the Real Beck all want you to succeed and believe that you can <3",
+        "savedAt": "2026-08-12T02:42:18.720Z",
+        "intentions": []
+      },
+      "2026-08-12": {
+        "sober": "sober",
+        "current": "5",
+        "urge": "none",
+        "feelings": [
+          "proud",
+          "grateful",
+          "tired",
+          "content"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "time in nature",
+          "called someone",
+          "breathwork",
+          "talk therapy"
+        ],
+        "journal": "I'm so grateful when I truly take the time for self care. I couldn't sleep last night, but tonight I held back to back sessions of Breathework with Sandy and Yoga Nidra with Ally. So good and helpful and now I am ready to sleep well and restore my body for a successful day tomorrow.",
+        "savedAt": "2026-08-13T03:24:15.380Z",
+        "intentions": []
+      },
+      "2026-08-13": {
+        "sober": "sober",
+        "current": null,
+        "urge": "none",
+        "feelings": [
+          "frustrated",
+          "overwhelmed"
+        ],
+        "triggers": [],
+        "skills": [
+          "yoga nidra",
+          "walked",
+          "time in nature",
+          "breathwork",
+          "went to bed early",
+          "treated myself"
+        ],
+        "journal": "Felt really frustrated today even though I slept well. It was a weird day, but two breathing sessions and a yoga nidra meditation definitely helped. I also treated myself with snacks and fast food.",
+        "savedAt": "2026-08-14T16:58:15.079Z",
+        "intentions": []
+      },
+      "2026-08-26": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [
+          "tired"
+        ],
+        "triggers": [],
+        "skills": [
+          "let myself rest"
+        ],
+        "journal": "",
+        "savedAt": "2026-08-27T21:52:00.679Z",
+        "intentions": []
+      },
+      "2026-08-25": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "exhausted"
+        ],
+        "triggers": [
+          "travel"
+        ],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-08-27T21:52:32.812Z",
+        "intentions": []
+      },
+      "2026-08-16": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-08-27T21:52:50.762Z",
+        "intentions": []
+      },
+      "2026-08-15": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-08-27T21:53:01.461Z",
+        "intentions": []
+      },
+      "2026-08-14": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-08-27T21:53:10.828Z",
+        "intentions": []
+      },
+      "2026-08-24": {
+        "sober": "sober",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-08-28T03:18:37.615Z",
+        "intentions": []
+      },
+      "2026-08-27": {
+        "sober": "sober",
+        "current": "3",
+        "urge": "whisper",
+        "feelings": [
+          "raw",
+          "numb",
+          "sad",
+          "exhausted",
+          "grief"
+        ],
+        "triggers": [
+          "bad news"
+        ],
+        "skills": [
+          "walked",
+          "time in nature",
+          "called someone"
+        ],
+        "journal": "I was pretty good today until I got some terrible news about a friend losing their battle with depression. I got really emotional and filled with grief, but talking with Emily helped and so did watching Jimi's livestream. I re-Heated tonight which was a great comfort show and helped me release some of my emotions.",
+        "savedAt": "2026-08-28T03:21:47.447Z",
+        "intentions": []
+      },
+      "2026-08-28": {
+        "sober": "used",
+        "current": null,
+        "urge": null,
+        "feelings": [],
+        "triggers": [],
+        "skills": [],
+        "journal": "",
+        "savedAt": "2026-08-29T19:34:36.664Z",
+        "intentions": []
+      },
+      "2026-08-30": {
+        "sober": "used",
+        "current": "4",
+        "urge": "pull",
+        "feelings": [
+          "raw",
+          "alive"
+        ],
+        "triggers": [
+          "travel",
+          "camping"
+        ],
+        "skills": [],
+        "journal": "Really such a pull. I didn't need it at all and just brought my pen and decided to smoke on the drive home from a great day at the waterfall with friends. Then that casacaded into bad decisions around getting fast food on the way home, smoking a J, and binging television when I was exhausted from the sun and told my friend that my plan was to shower, prep for Monday, meditate, and go to bed. I did none of the things I planned.",
+        "savedAt": "2026-08-31T14:52:36.302Z",
+        "intentions": []
+      },
+      "2026-08-29": {
+        "sober": "sober",
+        "current": null,
+        "urge": "whisper",
+        "feelings": [
+          "raw",
+          "numb",
+          "confused"
+        ],
+        "triggers": [
+          "stayed at home",
+          "grief"
+        ],
+        "skills": [
+          "time in nature",
+          "breathwork",
+          "spent time with a friend"
+        ],
+        "journal": "I was convinced today to start another super long streak. I was ready to stop feeling so groggy and blah from cannabis.",
+        "savedAt": "2026-08-31T14:52:12.802Z",
+        "intentions": []
+      }
+    },
+    "customFeelings": [],
+    "customTriggers": [],
+    "customSkills": [],
+    "feelingList": [
+      "grounded",
+      "anxious",
+      "joyful",
+      "hopeful",
+      "raw",
+      "clear",
+      "proud",
+      "tender",
+      "restless",
+      "peaceful",
+      "frustrated",
+      "grateful",
+      "numb",
+      "alive",
+      "ashamed",
+      "brave",
+      "tired",
+      "curious",
+      "lonely",
+      "content",
+      "overwhelmed",
+      "steady",
+      "fiery",
+      "soft",
+      "annoyed",
+      "sad",
+      "successful",
+      "passion",
+      "love",
+      "panic",
+      "depressed",
+      "fearful",
+      "blessed",
+      "calm",
+      "exhausted",
+      "grief",
+      "confused"
+    ],
+    "triggerList": [
+      "holiday",
+      "family",
+      "boredom",
+      "stress",
+      "celebration",
+      "loneliness",
+      "exhaustion",
+      "conflict",
+      "travel",
+      "camping",
+      "a hard memory",
+      "late night",
+      "social event",
+      "perfectionism",
+      "good news",
+      "stayed at home",
+      "routine work",
+      "lack of productivity",
+      "grief",
+      "major life changes",
+      "illness",
+      "bad news",
+      "alcohol",
+      "physical pain",
+      "recent usage",
+      "ANTs",
+      "repetitive behavior"
+    ],
+    "skillList": [
+      "yoga nidra",
+      "walked",
+      "time in nature",
+      "called someone",
+      "radical acceptance",
+      "cold water immersion",
+      "intense muscle relaxation",
+      "breathwork",
+      "left the situation",
+      "checked the facts",
+      "made art",
+      "went to bed early",
+      "let myself rest",
+      "exercised",
+      "community",
+      "played games",
+      "self-induced hypnosis",
+      "spent time with a friend",
+      "productive",
+      "talk therapy",
+      "read",
+      "tarot readings",
+      "spent time with family",
+      "spirituality",
+      "yoga",
+      "made future plans",
+      "giving back",
+      "treated myself",
+      "novelty",
+      "Mindfulness of current thoughts",
+      "loving-kindness",
+      "learned something new",
+      "journaling"
+    ]
+  }
+}
